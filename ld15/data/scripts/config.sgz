@@ -1,0 +1,12 @@
+-- This is the main SGZEngine script file 
+-- We basically just set some things up and call our "main function" from here
+
+--Window Creation
+WindowWidth = 320
+WindowHeight = 240
+WindowBPP = 16
+WindowName = "Moons of Subterrane"
+--Script Configuration
+MainScript = "data/scripts/main.lua"
+MainFunc = "main"
+--Last edited on Sat Aug 29 17:22:54 2009

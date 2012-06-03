@@ -1,0 +1,57 @@
+TARGET = SGZ2DSDL
+SOURCES	   =	code \
+				code/client \
+				code/client/audio \
+				code/client/gui \
+				code/client/gui/button \
+				code/client/gui/frame \
+				code/client/input \
+				code/client/renderer \
+				code/client/renderer/texture \
+				code/client/renderer/window \
+				code/common \
+				code/common/data \
+				code/common/debug \
+				code/common/engine \
+				code/common/entities \
+				code/common/script \
+				code/server \
+				code/server/gameServer \
+				code/server/managers \
+				code/server/managers/entityManager \
+				code/server/managers/levelManager \
+				code/server/managers/textureManager \
+				code/server/networkServer \
+				code/system \
+				code/system/lua \
+				code/system/lua/Proxies \
+				code/system/sdl \
+				code/system/sdl/audio \
+				code/system/sdl/entities \
+				code/system/sdl/input \
+				code/system/sdl/renderer \
+				code/system/sdl/window
+
+CPPFILES	=	$(foreach dir,$(SOURCES), $(wildcard $(dir)/*.cpp))
+OBJS = $(CPPFILES:%.cpp=%.o)
+
+INCDIR = $(PSPSDK)
+CFLAGS = -O2 -G0 -Wall $(shell sdl-config --cflags) -DpedanticGCC -DSDL_Main -DSGZ2D -DPLAT_PSPDEV -DREND_SDL -DIN_SDL -DSND_SDL -DNET_OFF -DGUI_SGZ -DSCRIPT_LUA
+CXXFLAGS = $(CFLAGS) -fexceptions #-fno-rtti
+ASFLAGS = $(CFLAGS)
+
+BUILD_PRX=1
+PSP_FW_VERSION = 500
+
+LIBDIR =
+LDFLAGS =
+#LIBS = -lvorbisidec -lGLu -lGL -lpspvfpu -lpsprtc -lvorbisidec -lpspaudiolib -lpspaudio -lpsppower -lm
+LIBS += -llua -lstdc++ -lSDL_mixer -lSDL_image $(shell sdl-config --libs) -lpng -ljpeg -lz -logg -lvorbisidec -lgcc -lm -lc
+#LIBS += -LC:/pspsdk/psp/lib -lSDL -lm -lGL -lpspvfpu -LC:/pspsdk/psp/sdk/lib -lpspdebug -lpspgu -lpspctrl -lpspge -lpspdisplay -lpsphprm -lpspsdk -lpsprtc -lpspaudio -lc -lpspuser -lpsputility -lpspkernel -lpspnet_inet
+
+EXTRA_TARGETS = EBOOT.PBP
+PSP_EBOOT_TITLE = SGZEngine
+
+PSPSDK=$(shell psp-config --pspsdk-path)
+include $(PSPSDK)/lib/build.mak
+

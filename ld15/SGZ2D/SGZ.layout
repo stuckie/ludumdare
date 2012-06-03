@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="SGZ2DLinuxDebug" />
+	<File name="Makefile.gph" open="0" top="0" tabpos="18">
+		<Cursor position="1883" topLine="18" />
+	</File>
+	<File name="Makefile.open2x" open="0" top="0" tabpos="17">
+		<Cursor position="1874" topLine="20" />
+	</File>
+	<File name="Makefile.pspSDL" open="0" top="0" tabpos="16">
+		<Cursor position="698" topLine="14" />
+	</File>
+	<File name="Makefile.wiiSDL" open="0" top="0" tabpos="15">
+		<Cursor position="1103" topLine="0" />
+	</File>
+	<File name="code/arch.h" open="0" top="0" tabpos="40">
+		<Cursor position="9889" topLine="128" />
+	</File>
+	<File name="code/client/IClient.h" open="0" top="0" tabpos="41">
+		<Cursor position="1363" topLine="10" />
+	</File>
+	<File name="code/client/OClient.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="3350" topLine="106" />
+	</File>
+	<File name="code/client/OClient.h" open="0" top="0" tabpos="42">
+		<Cursor position="3422" topLine="111" />
+	</File>
+	<File name="code/client/audio/IAudio.h" open="0" top="0" tabpos="43">
+		<Cursor position="5080" topLine="112" />
+	</File>
+	<File name="code/client/audio/OAudio.h" open="0" top="0" tabpos="44">
+		<Cursor position="6250" topLine="170" />
+	</File>
+	<File name="code/client/gui/MGui.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="1720" topLine="23" />
+	</File>
+	<File name="code/client/gui/MGui.h" open="0" top="0" tabpos="45">
+		<Cursor position="1758" topLine="23" />
+	</File>
+	<File name="code/client/gui/button/ButtonStates.h" open="0" top="0" tabpos="46">
+		<Cursor position="1202" topLine="14" />
+	</File>
+	<File name="code/client/gui/button/IButton.h" open="0" top="0" tabpos="47">
+		<Cursor position="1853" topLine="21" />
+	</File>
+	<File name="code/client/gui/button/OButton.h" open="0" top="0" tabpos="48">
+		<Cursor position="1922" topLine="35" />
+	</File>
+	<File name="code/client/gui/frame/IFrame.h" open="0" top="0" tabpos="49">
+		<Cursor position="1437" topLine="15" />
+	</File>
+	<File name="code/client/gui/frame/OFrame.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="1857" topLine="36" />
+	</File>
+	<File name="code/client/gui/frame/OFrame.h" open="0" top="0" tabpos="50">
+		<Cursor position="2079" topLine="63" />
+	</File>
+	<File name="code/client/input/IControl.h" open="0" top="0" tabpos="51">
+		<Cursor position="4210" topLine="97" />
+	</File>
+	<File name="code/client/input/OControl.h" open="0" top="0" tabpos="52">
+		<Cursor position="7692" topLine="295" />
+	</File>
+	<File name="code/client/renderer/IRender.h" open="0" top="0" tabpos="53">
+		<Cursor position="1875" topLine="34" />
+	</File>
+	<File name="code/client/renderer/ORender.h" open="0" top="0" tabpos="54">
+		<Cursor position="3366" topLine="94" />
+	</File>
+	<File name="code/client/renderer/texture/ITexture.h" open="0" top="0" tabpos="55">
+		<Cursor position="2091" topLine="26" />
+	</File>
+	<File name="code/client/renderer/texture/OTexture.h" open="0" top="0" tabpos="56">
+		<Cursor position="3897" topLine="113" />
+	</File>
+	<File name="code/client/renderer/window/IWindow.h" open="0" top="0" tabpos="57">
+		<Cursor position="1548" topLine="17" />
+	</File>
+	<File name="code/common/data/CArray3D.h" open="0" top="0" tabpos="1">
+		<Cursor position="5162" topLine="157" />
+	</File>
+	<File name="code/common/data/CRandom.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="4137" topLine="92" />
+	</File>
+	<File name="code/common/data/CRandom.h" open="0" top="0" tabpos="2">
+		<Cursor position="1140" topLine="3" />
+	</File>
+	<File name="code/common/data/CSLinkedlist.h" open="0" top="0" tabpos="4">
+		<Cursor position="14271" topLine="501" />
+	</File>
+	<File name="code/common/data/CSingleton.h" open="0" top="0" tabpos="5">
+		<Cursor position="2871" topLine="54" />
+	</File>
+	<File name="code/common/data/CTimer.h" open="0" top="0" tabpos="19">
+		<Cursor position="2736" topLine="99" />
+	</File>
+	<File name="code/common/debug/CDebug.cpp" open="0" top="0" tabpos="58">
+		<Cursor position="2370" topLine="62" />
+	</File>
+	<File name="code/common/debug/CDebug.h" open="0" top="0" tabpos="7">
+		<Cursor position="1590" topLine="28" />
+	</File>
+	<File name="code/common/engine/CInterpret.cpp" open="0" top="0" tabpos="10">
+		<Cursor position="4479" topLine="143" />
+	</File>
+	<File name="code/common/engine/CInterpret.h" open="0" top="0" tabpos="12">
+		<Cursor position="1079" topLine="5" />
+	</File>
+	<File name="code/common/engine/IEvent.h" open="0" top="0" tabpos="59">
+		<Cursor position="1579" topLine="21" />
+	</File>
+	<File name="code/common/engine/OEvent.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="1599" topLine="15" />
+	</File>
+	<File name="code/common/engine/OEvent.h" open="0" top="0" tabpos="60">
+		<Cursor position="6184" topLine="290" />
+	</File>
+	<File name="code/common/entities/IEntity.h" open="0" top="0" tabpos="13">
+		<Cursor position="4864" topLine="154" />
+	</File>
+	<File name="code/common/entities/OEntity2D.cpp" open="0" top="0" tabpos="35">
+		<Cursor position="4531" topLine="175" />
+	</File>
+	<File name="code/common/entities/OEntity2D.h" open="0" top="0" tabpos="33">
+		<Cursor position="4581" topLine="120" />
+	</File>
+	<File name="code/common/entities/OEntity3D.cpp" open="0" top="0" tabpos="36">
+		<Cursor position="4513" topLine="175" />
+	</File>
+	<File name="code/common/entities/OEntity3D.h" open="0" top="0" tabpos="34">
+		<Cursor position="4368" topLine="100" />
+	</File>
+	<File name="code/common/script/IScript.h" open="0" top="0" tabpos="61">
+		<Cursor position="2125" topLine="28" />
+	</File>
+	<File name="code/common/script/OScript.h" open="0" top="0" tabpos="62">
+		<Cursor position="3241" topLine="96" />
+	</File>
+	<File name="code/dependencies/Horde/Horde3D.h" open="0" top="0" tabpos="63">
+		<Cursor position="65528" topLine="1805" />
+	</File>
+	<File name="code/dependencies/Horde/Horde3DUtils.h" open="0" top="0" tabpos="64">
+		<Cursor position="3612" topLine="82" />
+	</File>
+	<File name="code/dependencies/Horde/utMath.h" open="0" top="0" tabpos="65">
+		<Cursor position="8413" topLine="327" />
+	</File>
+	<File name="code/dependencies/SDL/SDL.h" open="0" top="0" tabpos="66">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_active.h" open="0" top="0" tabpos="67">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_audio.h" open="0" top="0" tabpos="68">
+		<Cursor position="6267" topLine="110" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_byteorder.h" open="0" top="0" tabpos="69">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_cdrom.h" open="0" top="0" tabpos="70">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config.h" open="0" top="0" tabpos="71">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config_amiga.h" open="0" top="0" tabpos="72">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config_dreamcast.h" open="0" top="0" tabpos="73">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config_macos.h" open="0" top="0" tabpos="74">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config_macosx.h" open="0" top="0" tabpos="75">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config_minimal.h" open="0" top="0" tabpos="76">
+		<Cursor position="801" topLine="1" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config_nds.h" open="0" top="0" tabpos="77">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config_os2.h" open="0" top="0" tabpos="78">
+		<Cursor position="1250" topLine="4" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config_symbian.h" open="0" top="0" tabpos="79">
+		<Cursor position="2150" topLine="66" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_config_win32.h" open="0" top="0" tabpos="80">
+		<Cursor position="3273" topLine="93" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_copying.h" open="0" top="0" tabpos="81">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_cpuinfo.h" open="0" top="0" tabpos="82">
+		<Cursor position="939" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_endian.h" open="0" top="0" tabpos="83">
+		<Cursor position="4017" topLine="102" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_error.h" open="0" top="0" tabpos="84">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_events.h" open="0" top="0" tabpos="85">
+		<Cursor position="10823" topLine="265" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_framerate.h" open="0" top="0" tabpos="86">
+		<Cursor position="977" topLine="22" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_getenv.h" open="0" top="0" tabpos="87">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_gfxBlitFunc.h" open="0" top="0" tabpos="88">
+		<Cursor position="1158" topLine="26" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_gfxPrimitives.h" open="0" top="0" tabpos="89">
+		<Cursor position="7243" topLine="150" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_gfxPrimitives_font.h" open="0" top="0" tabpos="90">
+		<Cursor position="56273" topLine="3039" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_image.h" open="0" top="0" tabpos="91">
+		<Cursor position="832" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_imageFilter.h" open="0" top="0" tabpos="92">
+		<Cursor position="8548" topLine="149" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_joystick.h" open="0" top="0" tabpos="93">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_keyboard.h" open="0" top="0" tabpos="94">
+		<Cursor position="1572" topLine="12" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_keysym.h" open="0" top="0" tabpos="95">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_loadso.h" open="0" top="0" tabpos="96">
+		<Cursor position="1604" topLine="3" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_main.h" open="0" top="0" tabpos="97">
+		<Cursor position="1093" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_mixer.h" open="0" top="0" tabpos="98">
+		<Cursor position="24929" topLine="532" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_mouse.h" open="0" top="0" tabpos="99">
+		<Cursor position="2650" topLine="45" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_mutex.h" open="0" top="0" tabpos="100">
+		<Cursor position="4000" topLine="84" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_opengl.h" open="0" top="0" tabpos="101">
+		<Cursor position="107033" topLine="3055" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_platform.h" open="0" top="0" tabpos="102">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_quit.h" open="0" top="0" tabpos="103">
+		<Cursor position="1770" topLine="7" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_rotozoom.h" open="0" top="0" tabpos="104">
+		<Cursor position="2643" topLine="74" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_rwops.h" open="0" top="0" tabpos="105">
+		<Cursor position="2387" topLine="50" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_stdinc.h" open="0" top="0" tabpos="106">
+		<Cursor position="13845" topLine="527" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_syswm.h" open="0" top="0" tabpos="107">
+		<Cursor position="4337" topLine="117" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_thread.h" open="0" top="0" tabpos="108">
+		<Cursor position="2833" topLine="44" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_timer.h" open="0" top="0" tabpos="109">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_types.h" open="0" top="0" tabpos="110">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_version.h" open="0" top="0" tabpos="111">
+		<Cursor position="801" topLine="0" />
+	</File>
+	<File name="code/dependencies/SDL/SDL_video.h" open="0" top="0" tabpos="112">
+		<Cursor position="36525" topLine="846" />
+	</File>
+	<File name="code/dependencies/SDL/begin_code.h" open="0" top="0" tabpos="113">
+		<Cursor position="3389" topLine="85" />
+	</File>
+	<File name="code/dependencies/SDL/close_code.h" open="0" top="0" tabpos="114">
+		<Cursor position="792" topLine="0" />
+	</File>
+	<File name="code/dependencies/glext.h" open="0" top="0" tabpos="115">
+		<Cursor position="119478" topLine="3420" />
+	</File>
+	<File name="code/dependencies/glxext.h" open="0" top="0" tabpos="116">
+		<Cursor position="28134" topLine="697" />
+	</File>
+	<File name="code/dependencies/lua/lua.h" open="0" top="0" tabpos="117">
+		<Cursor position="6737" topLine="191" />
+	</File>
+	<File name="code/dependencies/lua/lua.hpp" open="0" top="0" tabpos="118">
+		<Cursor position="804" topLine="0" />
+	</File>
+	<File name="code/dependencies/lua/luaconf.h" open="0" top="0" tabpos="119">
+		<Cursor position="16337" topLine="524" />
+	</File>
+	<File name="code/dependencies/wglext.h" open="0" top="0" tabpos="120">
+		<Cursor position="10716" topLine="279" />
+	</File>
+	<File name="code/main.cpp" open="0" top="0" tabpos="121">
+		<Cursor position="5208" topLine="41" />
+	</File>
+	<File name="code/main.h" open="0" top="0" tabpos="122">
+		<Cursor position="1702" topLine="6" />
+	</File>
+	<File name="code/server/IServer.h" open="0" top="0" tabpos="123">
+		<Cursor position="1418" topLine="14" />
+	</File>
+	<File name="code/server/OServer.cpp" open="0" top="0" tabpos="38">
+		<Cursor position="1806" topLine="29" />
+	</File>
+	<File name="code/server/OServer.h" open="0" top="0" tabpos="127">
+		<Cursor position="1916" topLine="49" />
+	</File>
+	<File name="code/server/gameServer/GameServer.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="978" topLine="8" />
+	</File>
+	<File name="code/server/managers/levelManager/MLevel.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1344" topLine="9" />
+	</File>
+	<File name="code/system/horde/renderer/HordeRender.cpp" open="0" top="0" tabpos="128">
+		<Cursor position="2858" topLine="83" />
+	</File>
+	<File name="code/system/horde/renderer/HordeRender.h" open="0" top="0" tabpos="129">
+		<Cursor position="1952" topLine="32" />
+	</File>
+	<File name="code/system/horde/renderer/HordeTexture.cpp" open="0" top="0" tabpos="130">
+		<Cursor position="3778" topLine="92" />
+	</File>
+	<File name="code/system/horde/renderer/HordeTexture.h" open="0" top="0" tabpos="131">
+		<Cursor position="2382" topLine="34" />
+	</File>
+	<File name="code/system/lua/LuaProxies.cpp" open="0" top="0" tabpos="132">
+		<Cursor position="804" topLine="0" />
+	</File>
+	<File name="code/system/lua/LuaProxies.h" open="0" top="0" tabpos="133">
+		<Cursor position="804" topLine="0" />
+	</File>
+	<File name="code/system/lua/LuaScript.cpp" open="0" top="0" tabpos="134">
+		<Cursor position="10164" topLine="322" />
+	</File>
+	<File name="code/system/lua/LuaScript.h" open="0" top="0" tabpos="135">
+		<Cursor position="2442" topLine="64" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZAudio.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="2091" topLine="39" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZAudio.h" open="0" top="0" tabpos="137">
+		<Cursor position="2563" topLine="49" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZControl.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="21825" topLine="745" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZControl.h" open="1" top="0" tabpos="5">
+		<Cursor position="3849" topLine="54" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZEntityMan.cpp" open="0" top="0" tabpos="22">
+		<Cursor position="1207" topLine="9" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZEntityMan.h" open="0" top="0" tabpos="25">
+		<Cursor position="3250" topLine="81" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZHorde.cpp" open="0" top="0" tabpos="140">
+		<Cursor position="42083" topLine="1290" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZHorde.h" open="0" top="0" tabpos="141">
+		<Cursor position="5043" topLine="127" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZInterpret.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="961" topLine="4" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZInterpret.h" open="0" top="0" tabpos="142">
+		<Cursor position="1795" topLine="26" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZLevelMan.cpp" open="0" top="0" tabpos="143">
+		<Cursor position="990" topLine="3" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZLevelMan.h" open="0" top="0" tabpos="144">
+		<Cursor position="1770" topLine="30" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZNetwork.cpp" open="0" top="0" tabpos="145">
+		<Cursor position="1380" topLine="4" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZNetwork.h" open="0" top="0" tabpos="146">
+		<Cursor position="1460" topLine="16" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZRender.cpp" open="0" top="0" tabpos="147">
+		<Cursor position="2977" topLine="66" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZRender.h" open="0" top="0" tabpos="148">
+		<Cursor position="1505" topLine="24" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZTextureMan.cpp" open="0" top="0" tabpos="29">
+		<Cursor position="1024" topLine="4" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZTextureMan.h" open="0" top="0" tabpos="28">
+		<Cursor position="1590" topLine="21" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZTimer.cpp" open="0" top="0" tabpos="149">
+		<Cursor position="1987" topLine="43" />
+	</File>
+	<File name="code/system/lua/Proxies/SGZTimer.h" open="0" top="0" tabpos="150">
+		<Cursor position="1525" topLine="28" />
+	</File>
+	<File name="code/system/lua/lunar.h" open="0" top="0" tabpos="151">
+		<Cursor position="7414" topLine="199" />
+	</File>
+	<File name="code/system/opengl/entities/GLEntity2D.cpp" open="0" top="0" tabpos="152">
+		<Cursor position="14844" topLine="540" />
+	</File>
+	<File name="code/system/opengl/entities/GLEntity2D.h" open="0" top="0" tabpos="153">
+		<Cursor position="4622" topLine="122" />
+	</File>
+	<File name="code/system/sdl/audio/SDLAudio.cpp" open="0" top="0" tabpos="26">
+		<Cursor position="14866" topLine="512" />
+	</File>
+	<File name="code/system/sdl/audio/SDLAudio.h" open="0" top="0" tabpos="154">
+		<Cursor position="5152" topLine="181" />
+	</File>
+	<File name="code/system/sdl/entities/SDLEntity2D.cpp" open="0" top="0" tabpos="27">
+		<Cursor position="1201" topLine="7" />
+	</File>
+	<File name="code/system/sdl/entities/SDLEntity2D.h" open="0" top="0" tabpos="37">
+		<Cursor position="6122" topLine="224" />
+	</File>
+	<File name="code/system/sdl/input/SDLControl.cpp" open="0" top="0" tabpos="155">
+		<Cursor position="3138" topLine="81" />
+	</File>
+	<File name="code/system/sdl/input/SDLControl.h" open="0" top="0" tabpos="156">
+		<Cursor position="12637" topLine="499" />
+	</File>
+	<File name="code/system/sdl/renderer/SDLRenderer.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1704" topLine="39" />
+	</File>
+	<File name="code/system/sdl/renderer/SDLRenderer.h" open="0" top="0" tabpos="158">
+		<Cursor position="2205" topLine="57" />
+	</File>
+	<File name="code/system/sdl/renderer/SDLTexture.cpp" open="0" top="0" tabpos="159">
+		<Cursor position="3349" topLine="79" />
+	</File>
+	<File name="code/system/sdl/renderer/SDLTexture.h" open="0" top="0" tabpos="160">
+		<Cursor position="2516" topLine="55" />
+	</File>
+	<File name="code/system/sdl/window/SDLWindow.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="1929" topLine="28" />
+	</File>
+	<File name="code/system/sdl/window/SDLWindow.h" open="0" top="0" tabpos="162">
+		<Cursor position="2204" topLine="53" />
+	</File>
+	<File name="code/system/sdlgl/renderer/SDLGLRenderer.cpp" open="0" top="0" tabpos="163">
+		<Cursor position="3648" topLine="97" />
+	</File>
+	<File name="code/system/sdlgl/renderer/SDLGLRenderer.h" open="0" top="0" tabpos="164">
+		<Cursor position="1810" topLine="33" />
+	</File>
+	<File name="code/system/sdlgl/renderer/SDLGLTexture.cpp" open="0" top="0" tabpos="165">
+		<Cursor position="7882" topLine="209" />
+	</File>
+	<File name="code/system/sdlgl/renderer/SDLGLTexture.h" open="0" top="0" tabpos="166">
+		<Cursor position="2219" topLine="38" />
+	</File>
+	<File name="code/system/sdlgl/window/SDLGLWindow.cpp" open="0" top="0" tabpos="167">
+		<Cursor position="2775" topLine="57" />
+	</File>
+	<File name="code/system/sdlgl/window/SDLGLWindow.h" open="0" top="0" tabpos="168">
+		<Cursor position="1969" topLine="40" />
+	</File>
+	<File name="code/typedefs.h" open="0" top="0" tabpos="23">
+		<Cursor position="3277" topLine="106" />
+	</File>
+	<File name="gp2x_rules/base_rules" open="0" top="0" tabpos="0">
+		<Cursor position="2211" topLine="43" />
+	</File>
+</CodeBlocks_layout_file>

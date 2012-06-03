@@ -1,0 +1,189 @@
+.SUFFIXES:
+
+export PATH		:=	/opt/mipsel-linux-uclibc/usr/bin:$(PATH)
+
+#---------------------------------------------------------------------------------
+# the prefix on the compiler executables
+#---------------------------------------------------------------------------------
+PREFIX		:=	mipsel-linux-
+
+export CC	:=	$(PREFIX)gcc
+export CXX	:=	$(PREFIX)g++
+export AS	:=	$(PREFIX)as
+export AR	:=	$(PREFIX)ar
+export OBJCOPY	:=	$(PREFIX)objcopy
+export READELF	:=	$(PREFIX)readelf
+export STRIP	:=	$(PREFIX)strip
+
+#---------------------------------------------------------------------------------
+%.o: %.cpp
+	@echo $(notdir $<)
+	$(CXX) -MMD -MP -MF $(DEPSDIR)/$*.d $(CXXFLAGS) -c $< -o $@
+	
+#---------------------------------------------------------------------------------
+%.o: %.c
+	@echo $(notdir $<)
+	$(CC) -MMD -MP -MF $(DEPSDIR)/$*.d $(CFLAGS) -c $< -o $@
+
+
+%.dingoo:
+	@echo linking...
+	@$(LD) $(LDFLAGS) $(OFILES) $(LIBPATHS) $(LIBS) -o $@
+
+#---------------------------------------------------------------------------------
+# TARGET is the name of the output, if this ends with _mb a multiboot image is generated
+# BUILD is the directory where object files & intermediate files will be placed
+# SOURCES is a list of directories containing source code
+# DATA is a list of directories containing data files
+# INCLUDES is a list of directories containing header files
+#---------------------------------------------------------------------------------
+TARGET		:=	SGZ2D
+BUILD		:=	build-dingoo
+SOURCES		:=	code \
+				code/client \
+				code/client/audio \
+				code/client/gui \
+				code/client/gui/button \
+				code/client/gui/frame \
+				code/client/input \
+				code/client/renderer \
+				code/client/renderer/texture \
+				code/client/renderer/window \
+				code/common \
+				code/common/data \
+				code/common/debug \
+				code/common/engine \
+				code/common/entities \
+				code/common/script \
+				code/server \
+				code/server/gameServer \
+				code/server/managers \
+				code/server/managers/entityManager \
+				code/server/managers/levelManager \
+				code/server/managers/textureManager \
+				code/server/networkServer \
+				code/system \
+				code/system/lua \
+				code/system/lua/Proxies \
+				code/system/sdl \
+				code/system/sdl/audio \
+				code/system/sdl/entities \
+				code/system/sdl/input \
+				code/system/sdl/renderer \
+				code/system/sdl/window \
+				lua
+DATA		:=
+INCLUDES	:=
+
+#---------------------------------------------------------------------------------
+# options for code generation
+#---------------------------------------------------------------------------------
+CFLAGS	:=	-g -Wall -O3\
+ 			-fomit-frame-pointer\
+			-ffast-math
+
+CFLAGS	+=	$(INCLUDE) -DpedanticGCC -DPLAT_A320 -DSGZ2D -DREND_SDL -DSND_SDL -DIN_SDL -DNET_OFF -DGUI_SGZ -DSCRIPT_LUA -DLUA_USE_POSIX
+CXXFLAGS	+=	$(CFLAGS)
+
+ASFLAGS	:=
+LDFLAGS	=	-g
+
+#---------------------------------------------------------------------------------
+# any extra libraries we wish to link with the project
+#---------------------------------------------------------------------------------
+LIBS	:=	-lSDL_image -ljpeg -lpng12 -lz -lSDL_mixer -lmad -lSDL -lSDLmain -lgcc -lm -ldl -lpthread -msoft-float
+
+#---------------------------------------------------------------------------------
+# list of directories containing libraries, this must be the top level containing
+# include and lib
+#---------------------------------------------------------------------------------
+LIBDIRS	:=	/opt/mipsel-linux-uclibc /opt/mipsel-linux-uclibc/usr
+
+#---------------------------------------------------------------------------------
+# no real need to edit anything past this point unless you need to add additional
+# rules for different file extensions
+#---------------------------------------------------------------------------------
+ifneq ($(BUILD),$(notdir $(CURDIR)))
+#---------------------------------------------------------------------------------
+
+export OUTPUT	:=	$(CURDIR)/$(TARGET)
+export VPATH	:=	$(foreach dir,$(SOURCES),$(CURDIR)/$(dir)) \
+					$(foreach dir,$(DATA),$(CURDIR)/$(dir))
+
+export DEPSDIR	:=	$(CURDIR)/$(BUILD)
+
+#---------------------------------------------------------------------------------
+# automatically build a list of object files for our project
+#---------------------------------------------------------------------------------
+CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
+CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
+SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
+BINFILES	:=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.*)))
+
+#---------------------------------------------------------------------------------
+# use CXX for linking C++ projects, CC for standard C
+#---------------------------------------------------------------------------------
+ifeq ($(strip $(CPPFILES)),)
+#---------------------------------------------------------------------------------
+	export LD	:=	$(CC)
+#---------------------------------------------------------------------------------
+else
+#---------------------------------------------------------------------------------
+	export LD	:=	$(CXX)
+#---------------------------------------------------------------------------------
+endif
+#---------------------------------------------------------------------------------
+
+export OFILES	:= $(addsuffix .o,$(BINFILES)) $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
+
+#---------------------------------------------------------------------------------
+# build a list of include paths
+#---------------------------------------------------------------------------------
+export INCLUDE	:=	$(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
+					$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
+					-I$(CURDIR)/$(BUILD) \
+					-I$(CURDIR)/lua
+
+#---------------------------------------------------------------------------------
+# build a list of library paths
+#---------------------------------------------------------------------------------
+export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
+
+.PHONY: $(BUILD) clean
+
+#---------------------------------------------------------------------------------
+$(BUILD):
+	@[ -d $@ ] || mkdir -p $@
+	@make --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile.dingoo
+
+all	: $(BUILD)
+
+#---------------------------------------------------------------------------------
+strip	:
+	@echo stripping...
+	@$(STRIP) $(OUTPUT).dingoo
+
+#---------------------------------------------------------------------------------
+clean:
+	@echo clean ...
+	@rm -fr $(BUILD) $(TARGET).elf $(TARGET).dingoo
+
+#---------------------------------------------------------------------------------
+else
+
+DEPENDS	:=	$(OFILES:.o=.d)
+
+#---------------------------------------------------------------------------------
+# main targets
+#---------------------------------------------------------------------------------
+$(OUTPUT).dingoo:	$(OFILES)
+
+%.o	:	%.pcx
+	@echo $(notdir $<)
+	@$(bin2o)
+
+-include $(DEPENDS)
+
+#---------------------------------------------------------------------------------
+endif
+#---------------------------------------------------------------------------------

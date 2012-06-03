@@ -1,0 +1,36 @@
+Moons of Subterrane - LD15
+--------------------------
+Steven "Stuckie" Campbell
+
+Plot:
+We've been doing research around the Moons of Subterrane for a while now,
+though unfortunately the locals have decided they're not too happy about it anymore.
+
+They've unleashed a horde of vicious monsters into the caves we have been researching in.
+Your job is to clear these caves and rescue our researchers.
+Of course, the natives have also managed to destabalise each sector of the Moon we're in,
+so you've only got a set amount of time before it tears itself apart!
+
+You ship is controlled via the Arrow Keys.
+Z acts as a firing mechanism
+X will transport researchers between your ship and whatever station you've landed on.
+
+Good Luck!
+
+-------------------------------------------------
+
+Oh the fun this was.
+I probably only spent about 24 hours on it max... wouldn't be too hard to extend either.
+
+Sounds were done in MilkyTracker via messing with the debug log as a sample source ;)
+The engine does run on the Wiz and Dingoo, but I don't think I've got the buttons mapped, so it may run but not do anything.
+
+Full source code is provided though!
+
+I only managed to properly map out Chronos and the first two sectors of Kala.
+The rest are repeats of Chronos with random gravity values, and different tilemaps ( colour shifts, wooo )
+
+Hope you enjoy it :)
+Built and tested on Windows 7 and Gentoo Linux AMD64
+
+-- Stuckie

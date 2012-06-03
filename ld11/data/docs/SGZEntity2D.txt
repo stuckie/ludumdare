@@ -1,0 +1,36 @@
+SGZEntity2D Functions:
+
+Key: Function Name ( Param, Param(default value), Param[value] );
+
+Update ();
+MoveTo ( X[int], Y[int], Z[int] );
+LookTo ( X[int], Y[int], Z[int] )
+MoveDeltaX ( amount[int] );
+MoveDeltaY ( amount[int] );
+MoveDeltaZ ( amount[int] );
+GetX (); -- returns float/number
+GetY (); -- returns float/number
+GetZ (); -- returns float/number
+ GetLookX (); -- returns float/number
+ GetLookY (); -- returns float/number
+ GetLookZ (); -- returns float/number
+Scale ( value[int] );
+ScaleX ( value[int] );
+ScaleY ( value[int] );
+ScaleZ ( value[int] );
+RotateX ( value[int] );
+RotateY ( value[int] );
+RotateZ (  value[int] );
+MaxAccel ( value[int] );
+GetSpeed (); returns float/number
+GetAccel (); -- returns float/number
+SetAccel ( float value );
+Stop ();
+SetCollisionGeom ( type[int] );
+GetAnimation() -- returns string
+SetAnimation( Name[string] );
+CreateAnimation( Name[string );
+DeleteAnimation( Name[string] );
+LoadFrame ( Name[string], Filename[string] );
+SetName( Name[string] );
+GetName (); -- returns string

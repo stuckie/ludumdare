@@ -1,0 +1,6 @@
+SGZNetwork Functions:
+
+Key: Function Name ( Param, Param(default value), Param[value] );
+
+OpenConnection();
+CloseConnection();

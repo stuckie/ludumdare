@@ -1,0 +1,7 @@
+SGZTexture Functions:
+
+Key: Function Name ( Param, Param(default value), Param[value] );
+
+LoadTexture ( Filename );
+SetColourKey ( R[int], G[int], B[int] );
+Blit ( X, Y );

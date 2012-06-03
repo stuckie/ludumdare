@@ -1,0 +1,29 @@
+SGZAudio Functions
+
+Key: Function Name ( Param, Param(default value), Param[value] );
+
+LoadMUS ( Filename, Musicname );
+LoadSFX ( Filename, Soundname );
+PlayMUS ( Musicname, Loops(0) );
+PlaySFX ( Soundname, Loops(0), Channel(-1) );
+FadeInMUS ( Musicname, Time[ms], Loops(0) );
+FadeInSFX ( Soundname, Time[ms], Loops(0), Channel(-1) );
+FadeOutMUS ( Time[ms] );
+FadeOutCHAN ( Channel, Time );
+StopMUS ();
+StopCHAN ( channel );
+PauseMUS ();
+PauseCHAN ( channel );
+ResumeMUS ();
+ResumeCHAN ( channel );
+RewindMUS ();
+SetMUSPOS ( position[number] );
+SetMUSVolume ( volume );
+SetSFXVolume ( Soundname, volume );
+MUSPlaying (); -- returns true if playing, false if not
+CHANPlaying ( channel ); -- if channel = 0, returns number of channels playing, else true/false
+SetChannels ( amount );
+SetPanning ( Channel, Left[int], Right[int] );
+SetPosition ( Channel, Angle[int], Distance );
+SetDistance ( Channel, Distance );
+SetReverse ( Channel, Flip[bool] );

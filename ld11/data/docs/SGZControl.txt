@@ -1,0 +1,6 @@
+SGZControl Functions:
+
+Key: Function Name ( Param, Param(default value), Param[value] );
+
+UpdateControls ();
+GetKey ( Key[string] ); -- returns boolean

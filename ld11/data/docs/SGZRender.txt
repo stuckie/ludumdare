@@ -1,0 +1,7 @@
+SGZRender Functions:
+
+Key: Function Name ( Param, Param(default value), Param[value] );
+
+NewWindow ( WindowName[string], Width, Height, 	BPP );
+CloseWindow ();
+UpdateScreen ();

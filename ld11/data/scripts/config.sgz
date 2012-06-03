@@ -1,0 +1,13 @@
+-- This is the main SGZEngine script file 
+-- We basically just set some things up and call our "main function" from here
+
+--Window Creation
+WindowWidth = 640
+WindowHeight = 480
+WindowBPP = 32
+WindowName = "GEvOlve"
+--Script Configuration
+MainScript = "data/scripts/gevolve.lua"
+MainFunc = "main"
+--Last edited on Sun Apr 20 19:06:57 2008
+ 

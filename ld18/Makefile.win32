@@ -1,0 +1,175 @@
+#---------------------------------------------------------------------------------
+# general makefile for SGEngine Frameworks
+#---------------------------------------------------------------------------------
+
+export PROJECTPATH := C:/Projects/ld18
+
+.SUFFIXES:
+
+#---------------------------------------------------------------------------------
+# the prefix on the compiler executables
+#---------------------------------------------------------------------------------
+PREFIX		:=	mingw32-
+
+export CC	:=	$(PREFIX)gcc
+export CXX	:=	$(PREFIX)g++
+export AS	:=	$(PREFIX)as
+export AR	:=	$(PREFIX)ar
+export OBJCOPY	:=	$(PREFIX)objcopy
+export READELF	:=	$(PREFIX)readelf
+export STRIP	:=	$(PREFIX)strip
+
+#---------------------------------------------------------------------------------
+%.o: %.cpp
+	@echo $(notdir $<)
+	$(CXX) -MMD -MP -MF $(DEPSDIR)/$*.d $(CXXFLAGS) -c $< -o $@
+	
+#---------------------------------------------------------------------------------
+%.o: %.c
+	@echo $(notdir $<)
+	$(CC) -MMD -MP -MF $(DEPSDIR)/$*.d $(CFLAGS) -c $< -o $@
+
+
+%.exe:
+	@echo linking...
+	@$(LD) $(LDFLAGS) $(OFILES) $(LIBPATHS) $(LIBS) -o $@
+
+#---------------------------------------------------------------------------------
+# TARGET is the name of the output, if this ends with _mb a multiboot image is generated
+# BUILD is the directory where object files & intermediate files will be placed
+# SOURCES is a list of directories containing source code
+# DATA is a list of directories containing data files
+# INCLUDES is a list of directories containing header files
+#---------------------------------------------------------------------------------
+TARGET		:=	TITAN
+BUILD		:=	build-mingw32
+SOURCES		:=	code \
+				code/Entities \
+				code/Loadables \
+				code/Logger \
+				code/Managers \
+				code/Objects \
+				code/States \
+				code/States/GameState \
+				code/States/MenuState \
+				code/Systems \
+				code/Systems/Audio \
+				code/Systems/Entity \
+				code/Systems/Graphics \
+				code/Systems/Input \
+				code/Systems/Physics \
+				code/Timer
+DATA		:=
+INCLUDES	:=  
+
+#---------------------------------------------------------------------------------
+# options for code generation
+#---------------------------------------------------------------------------------
+CFLAGS	:=	-Wall -g\
+#			-O3 \
+# 			-fomit-frame-pointer\
+			-ffast-math\
+			-fno-rtti\
+			-fno-exceptions\
+			-D __WIN32__
+
+CFLAGS		+=	$(INCLUDE)
+CXXFLAGS	+=	$(CFLAGS)
+
+ASFLAGS	:=
+LDFLAGS	=	
+
+#---------------------------------------------------------------------------------
+# any extra libraries we wish to link with the project
+#---------------------------------------------------------------------------------
+LIBS	:=	-lmingw32 -lSDLmain -lSDL -lSDL_gfx
+
+#---------------------------------------------------------------------------------
+# list of directories containing libraries, this must be the top level containing
+# include and lib
+#---------------------------------------------------------------------------------
+LIBDIRS	:= $(PROJECTPATH)/dependencies/win32/SDL
+
+#---------------------------------------------------------------------------------
+# no real need to edit anything past this point unless you need to add additional
+# rules for different file extensions
+#---------------------------------------------------------------------------------
+ifneq ($(BUILD),$(notdir $(CURDIR)))
+#---------------------------------------------------------------------------------
+
+export OUTPUT	:=	$(CURDIR)/$(TARGET)
+export VPATH	:=	$(foreach dir,$(SOURCES),$(CURDIR)/$(dir)) \
+					$(foreach dir,$(DATA),$(CURDIR)/$(dir))
+
+export DEPSDIR	:=	$(CURDIR)/$(BUILD)
+
+#---------------------------------------------------------------------------------
+# automatically build a list of object files for our project
+#---------------------------------------------------------------------------------
+CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
+CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
+SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
+BINFILES	:=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.*)))
+
+#---------------------------------------------------------------------------------
+# use CXX for linking C++ projects, CC for standard C
+#---------------------------------------------------------------------------------
+ifeq ($(strip $(CPPFILES)),)
+#---------------------------------------------------------------------------------
+	export LD	:=	$(CC)
+#---------------------------------------------------------------------------------
+else
+#---------------------------------------------------------------------------------
+	export LD	:=	$(CXX)
+#---------------------------------------------------------------------------------
+endif
+#---------------------------------------------------------------------------------
+
+export OFILES	:= $(addsuffix .o,$(BINFILES)) $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
+
+#---------------------------------------------------------------------------------
+# build a list of include paths
+#---------------------------------------------------------------------------------
+export INCLUDE	:=	$(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
+					$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
+					-I$(CURDIR)/$(BUILD)
+
+#---------------------------------------------------------------------------------
+# build a list of library paths
+#---------------------------------------------------------------------------------
+export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
+
+.PHONY: $(BUILD) clean
+
+#---------------------------------------------------------------------------------
+$(BUILD):
+	@if not exist $@ mkdir $@
+	@$(PREFIX)make --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile.win32
+
+all	: $(BUILD)
+
+#---------------------------------------------------------------------------------
+strip	:
+	@echo stripping...
+	@$(STRIP) $(OUTPUT).exe
+
+#---------------------------------------------------------------------------------
+clean:
+	@echo clean ...
+	@rm -fr $(BUILD) $(TARGET).exe
+
+#---------------------------------------------------------------------------------
+else
+
+DEPENDS	:=	$(OFILES:.o=.d)
+
+#---------------------------------------------------------------------------------
+# main targets
+#---------------------------------------------------------------------------------
+$(OUTPUT).exe:	$(OFILES)
+
+-include $(DEPENDS)
+
+#---------------------------------------------------------------------------------
+endif
+#---------------------------------------------------------------------------------

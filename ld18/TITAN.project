@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="TITAN" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00040001N0005Debug0000000000000001N0005Linux0000000000000001N0007Release0000000000000001N0005Win32000000000000]]>
+    </Plugin>
+  </Plugins>
+  <VirtualDirectory Name="dependencies">
+    <VirtualDirectory Name="win32">
+      <VirtualDirectory Name="SDL">
+        <VirtualDirectory Name="include">
+          <VirtualDirectory Name="SDL">
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_getenv.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_main.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_joystick.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_active.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_thread.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_loadso.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_quit.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_syswm.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_events.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_keyboard.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_video.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_cpuinfo.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_mutex.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_audio.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/begin_code.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_types.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/doxyfile"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_byteorder.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_timer.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_cdrom.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_mouse.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_opengl.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/close_code.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_error.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_endian.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_stdinc.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_config.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_rwops.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_version.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_keysym.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_name.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_platform.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_copying.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_framerate.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_gfxBlitFunc.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_gfxPrimitives.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_gfxPrimitives_font.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_imageFilter.h"/>
+            <File Name="dependencies/win32/SDL/include/SDL/SDL_rotozoom.h"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="code">
+    <VirtualDirectory Name="Systems">
+      <VirtualDirectory Name="Physics">
+        <File Name="code/Systems/Physics/PhysicsSystem.h"/>
+        <File Name="code/Systems/Physics/PhysicsSystem.cpp"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Graphics">
+        <File Name="code/Systems/Graphics/GraphicsSystem.cpp"/>
+        <File Name="code/Systems/Graphics/GraphicsSystem.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Entity">
+        <File Name="code/Systems/Entity/EntitySystem.cpp"/>
+        <File Name="code/Systems/Entity/EntitySystem.h"/>
+        <File Name="code/Systems/Entity/EntityList.cpp"/>
+        <File Name="code/Systems/Entity/EntityList.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Input">
+        <File Name="code/Systems/Input/InputSystem.cpp"/>
+        <File Name="code/Systems/Input/InputSystem.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Audio">
+        <File Name="code/Systems/Audio/AudioSystem.cpp"/>
+        <File Name="code/Systems/Audio/AudioSystem.h"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <File Name="code/main.cpp"/>
+    <VirtualDirectory Name="Loadables">
+      <File Name="code/Loadables/HighScoreTable.h"/>
+      <File Name="code/Loadables/Configuration.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Managers">
+      <File Name="code/Managers/ConfigManager.cpp"/>
+      <File Name="code/Managers/ConfigManager.h"/>
+      <File Name="code/Managers/StateManager.cpp"/>
+      <File Name="code/Managers/StateManager.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Logger">
+      <File Name="code/Logger/Logger.cpp"/>
+      <File Name="code/Logger/Logger.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Timer">
+      <File Name="code/Timer/Timer.h"/>
+      <File Name="code/Timer/Timer.cpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="States">
+      <File Name="code/States/MenuState.h"/>
+      <File Name="code/States/GameState.h"/>
+      <File Name="code/States/State.h"/>
+      <File Name="code/States/Process.h"/>
+      <File Name="code/States/Processor.h"/>
+      <File Name="code/States/MenuState.cpp"/>
+      <VirtualDirectory Name="MenuState">
+        <File Name="code/States/MenuState/MenuLoadingProcess.h"/>
+      </VirtualDirectory>
+      <File Name="code/States/GameState.cpp"/>
+      <VirtualDirectory Name="GameState">
+        <File Name="code/States/GameState/GameLoadingProcess.h"/>
+        <File Name="code/States/GameState/GameRenderProcess.h"/>
+        <File Name="code/States/GameState/GameLoadingProcess.cpp"/>
+        <File Name="code/States/GameState/GameRenderProcess.cpp"/>
+        <File Name="code/States/GameState/GamePhysicsProcess.h"/>
+        <File Name="code/States/GameState/GamePhysicsProcess.cpp"/>
+        <File Name="code/States/GameState/GameInputProcess.h"/>
+        <File Name="code/States/GameState/GameInputProcess.cpp"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Entities">
+      <File Name="code/Entities/Entity.h"/>
+      <File Name="code/Entities/Entity.cpp"/>
+      <File Name="code/Entities/PlayerShip.h"/>
+      <File Name="code/Entities/PlayerShip.cpp"/>
+      <File Name="code/Entities/Bullet.cpp"/>
+      <File Name="code/Entities/Bullet.h"/>
+      <File Name="code/Entities/GrappleHook.cpp"/>
+      <File Name="code/Entities/GrappleHook.h"/>
+      <File Name="code/Entities/HookSegment.cpp"/>
+      <File Name="code/Entities/HookSegment.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Objects">
+      <File Name="code/Objects/GraphicObject.h"/>
+      <File Name="code/Objects/SoundObject.h"/>
+      <File Name="code/Objects/GraphicsCamera2D.h"/>
+      <File Name="code/Objects/GraphicsCamera.h"/>
+      <File Name="code/Objects/SDLGraphicObject.cpp"/>
+      <File Name="code/Objects/SDLGraphicObject.h"/>
+      <File Name="code/Objects/Math.h"/>
+      <File Name="code/Objects/InputObject.h"/>
+      <File Name="code/Objects/SDLInputObject.cpp"/>
+      <File Name="code/Objects/SDLInputObject.h"/>
+      <File Name="code/Objects/Math.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="ld18">
+    <File Name="Makefile.linux"/>
+    <File Name="Makefile.win32"/>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <Configuration Name="Linux" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" Required="no" PreCompiledHeader="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="no"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(WorkspacePath)/$(ProjectName).linux" IntermediateDirectory="./Debug" Command="./$(ProjectName).linux" CommandArguments="" WorkingDirectory="$(WorkspacePath)" PauseExecWhenProcTerminates="yes"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="yes">
+        <RebuildCommand>make -f Makefile.linux clean &amp;&amp; make -f Makefile.linux</RebuildCommand>
+        <CleanCommand>make -f Makefile.linux clean</CleanCommand>
+        <BuildCommand>make -f Makefile.linux</BuildCommand>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory>$(ProjectPath)</WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Win32" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" Required="yes" PreCompiledHeader="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="-O2" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="yes">
+        <RebuildCommand>mingw32-make -f Makefile.win32 clean &amp;&amp; mingw32-make -f Makefile.win32</RebuildCommand>
+        <CleanCommand>mingw32-make -f Makefile.win32 clean</CleanCommand>
+        <BuildCommand>mingw32-make -f Makefile.win32</BuildCommand>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory>$(ProjectPath)</WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+    <GlobalSettings>
+      <Compiler Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+  </Settings>
+</CodeLite_Project>

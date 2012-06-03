@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="ShaderTransforms" InternalType="">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
+  <VirtualDirectory Name="Examples">
+    <VirtualDirectory Name="ShaderTransforms">
+      <File Name="main.cpp"/>
+      <File Name="Makefile.linux"/>
+      <File Name="MakefileES1.pandora"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Events">
+    <VirtualDirectory Name="X11">
+      <File Name="../../Events/X11/X11Events.cpp"/>
+      <File Name="../../Events/X11/X11EventSystem.cpp"/>
+      <File Name="../../Events/X11/X11Events.h"/>
+      <File Name="../../Events/X11/X11EventSystem.h"/>
+    </VirtualDirectory>
+    <File Name="../../Events/EventSystem.cpp"/>
+    <File Name="../../Events/SystemEvents.cpp"/>
+    <File Name="../../Events/Event.h"/>
+    <File Name="../../Events/EventTypes.h"/>
+    <File Name="../../Events/EventSystem.h"/>
+    <File Name="../../Events/SystemEvents.h"/>
+    <File Name="../../Events/EventTypes.cpp"/>
+    <File Name="../../Events/EventObserver.h"/>
+    <File Name="../../Events/EventTrigger.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Input">
+    <VirtualDirectory Name="Linux">
+      <File Name="../../Input/Linux/LinuxInputSystem.h"/>
+      <File Name="../../Input/Linux/LinuxInputSystem.cpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Pandora">
+      <File Name="../../Input/Pandora/PandoraInputSystem.h"/>
+      <File Name="../../Input/Pandora/pnd_io_evdev.h"/>
+      <File Name="../../Input/Pandora/PandoraInputSystem.cpp"/>
+    </VirtualDirectory>
+    <File Name="../../Input/Pointer.h"/>
+    <File Name="../../Input/Joystick.h"/>
+    <File Name="../../Input/ControllerTypes.cpp"/>
+    <File Name="../../Input/Keyboard.h"/>
+    <File Name="../../Input/InputSystem.h"/>
+    <File Name="../../Input/Pad.h"/>
+    <File Name="../../Input/ControllerTypes.h"/>
+    <File Name="../../Input/Controller.cpp"/>
+    <File Name="../../Input/Keyboard.cpp"/>
+    <File Name="../../Input/Controller.h"/>
+    <File Name="../../Input/InputSystem.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Graphics">
+    <VirtualDirectory Name="Context">
+      <File Name="../../Graphics/Context/FixedFunctionContext.h"/>
+      <File Name="../../Graphics/Context/GLXContext.h"/>
+      <File Name="../../Graphics/Context/ShaderBasedContext.h"/>
+      <File Name="../../Graphics/Context/GLXContext.cpp"/>
+      <File Name="../../Graphics/Context/GLES2Context.h"/>
+      <File Name="../../Graphics/Context/GLES2Context.cpp"/>
+      <File Name="../../Graphics/Context/RenderContext.h"/>
+      <File Name="../../Graphics/Context/GLES1Context.h"/>
+      <File Name="../../Graphics/Context/GLES1Context.cpp"/>
+      <File Name="../../Graphics/Context/ShaderBasedContext.cpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Window">
+      <File Name="../../Graphics/Window/X11Window.cpp"/>
+      <File Name="../../Graphics/Window/Window.h"/>
+      <File Name="../../Graphics/Window/X11Window.h"/>
+    </VirtualDirectory>
+    <File Name="../../Graphics/Mesh.cpp"/>
+    <File Name="../../Graphics/Mesh.h"/>
+    <File Name="../../Graphics/IndexBuffer.h"/>
+    <File Name="../../Graphics/Material.h"/>
+    <File Name="../../Graphics/Shader.h"/>
+    <File Name="../../Graphics/VertexBuffer.h"/>
+    <File Name="../../Graphics/VertexBuffer.cpp"/>
+    <File Name="../../Graphics/Shader.cpp"/>
+  </VirtualDirectory>
+  <Description/>
+  <Dependencies/>
+  <Settings Type="Dynamic Library">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Dynamic Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" C_Options="-g" Required="yes" PreCompiledHeader="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="./Debug" Command="$(ProjectPath)GLESGAE.linux" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="yes">
+        <RebuildCommand>make -f Makefile.linux clean &amp;&amp; make -f Makefile.linux</RebuildCommand>
+        <CleanCommand>make -f Makefile.linux clean</CleanCommand>
+        <BuildCommand>make -f Makefile.linux</BuildCommand>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory>$(ProjectPath)</WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Dynamic Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" C_Options="" Required="yes" PreCompiledHeader="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="-O2" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="./Release" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="yes">
+        <RebuildCommand/>
+        <CleanCommand>make clean</CleanCommand>
+        <BuildCommand>make</BuildCommand>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory>$(WorkspacePath)</WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+  </Settings>
+  <VirtualDirectory Name="Resources">
+    <File Name="../../Resources/BaseResource.cpp"/>
+    <File Name="../../Resources/BaseResource.h"/>
+    <File Name="../../Resources/IResource.h"/>
+    <File Name="../../Resources/ResourceManager.cpp"/>
+    <File Name="../../Resources/ResourceManager.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Maths">
+    <File Name="../../Maths/Matrix4.h"/>
+  </VirtualDirectory>
+</CodeLite_Project>

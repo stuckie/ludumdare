@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Workspace Name="GLESGAE" Database="./GLESGAE.tags">
+  <Project Name="WindowContextTest" Path="Examples/WindowContextTest/WindowContextTest.project" Active="No"/>
+  <Project Name="EventTest" Path="Examples/EventTest/EventTest.project" Active="No"/>
+  <Project Name="FixedFunctionTest" Path="Examples/FixedFunctionTest/FixedFunctionRenderTest.project" Active="No"/>
+  <Project Name="ShaderRenderTest" Path="Examples/ShaderRenderTest/ShaderRenderTest.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Linux Debug" Selected="yes">
+      <Project Name="WindowContextTest" ConfigName="Linux Debug"/>
+      <Project Name="EventTest" ConfigName="Debug"/>
+      <Project Name="ShaderRenderTest" ConfigName="Debug"/>
+      <Project Name="FixedFunctionTest" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Pandora GLES1 Debug" Selected="yes">
+      <Project Name="WindowContextTest" ConfigName="Pandora GLES1 Debug"/>
+      <Project Name="EventTest" ConfigName="Debug"/>
+      <Project Name="ShaderRenderTest" ConfigName="Debug"/>
+      <Project Name="FixedFunctionTest" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Pandora GLES2 Debug" Selected="yes">
+      <Project Name="WindowContextTest" ConfigName="Pandora GLES2 Debug"/>
+      <Project Name="EventTest" ConfigName="Debug"/>
+      <Project Name="ShaderRenderTest" ConfigName="Debug"/>
+      <Project Name="FixedFunctionTest" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

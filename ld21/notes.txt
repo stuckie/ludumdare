@@ -1,0 +1,48 @@
+"Thieving Fingers"
+
+COMPILE NOTES:
+Compile the engine first...
+cd glesgae; make -f Makeoptlib.platform; cd ..
+Then compile fingers...
+cd fingers; make -f Makefile.platform
+Should then be able to run it...
+./fingers.platform
+
+Where "platform" is your host OS ( IE: linux, win32, etc.. )
+
+
+GAME DESIGN NOTES:
+You are Fingers, a notorious jewel thief, well known for getting in and out of the highest security buildings to claim your prize.
+When news of the Star Diamond being moved to a new facility broke, you got a mysterious offer to test their security.
+If you got through, you not only got the diamond, but enough money to never need to work again.
+They left out what happens if you fail, but you've never failed yet... right?
+
+Top down or Side-scrolling?
+Need to tile either way.
+Think I'll do top-down for a change.. make it a bit different from the mass of side-scrollers that are more or less guaranteed to appear.
+
+Traps:
+Horizontal/Vertical crushers
+Cameras ( symbolized by slow moving circles on the ground, and a box connected to a wall )
+Lasers
+Trap doors ( which open and close, naturally )
+Spikes
+Arrows
+
+TECH NOTES:
+
+States: Frontend Game Gameover Complete
+
+Scrolling Camera : big playfield, tile based
+Level Editor?
+
+MISSING ENGINE BITS:
+Audio .. should implement OpenAL
+Physics... simple enough to do box/circle collisions
+Most other things, actually...
+
+Day One: Get all engine framework and logic done
+Day Two: Content
+Day Three: PROFIT!!!
+
+

@@ -1,0 +1,61 @@
+Code Needed:
+
+GraphicsManager:
+Needs to sort back to front all graphics via Transform, Shader, Material, Index, Vertex
+
+SpriteManager:
+Load up TextureDefinition files to create a bunch of Sprite Meshes for Entities to pull off.
+
+Texture Definition:
+texture file name - relative path
+sprite name
+u, v, w, h
+
+This could be a set of structs to speed up loading - load the entire file in one glob for example, rather than parsing through it line by line.
+
+EntityManager:
+Load up EntityDescriptions to load completed Entities.
+
+Entity Description:
+Type
+Amount
+data corresponding to type struct
+
+
+Need to fix up Resource so that the id is a HashString rather than a standard Uint.
+This requires the Resourcebank to be modified so that it doesn't use the resource id as the index value to the array.
+
+Input Manager
+Need to catch the System Events which the Event System spits out.. nothing is currently picking them up, so we can't close the window to quit, for example.
+Also should probably use this to send notifications of movement to other systems.
+
+Texture should probably be split up so we can deal with compressed texture formats - such as ETC1 for ES 2.0 platforms, PVR for Apple and some Android platforms, ATITC for other Android platforms and DXT/S3TC for some Android platforms and Desktop platforms
+
+GameCamera Manager:
+Should be able to just pinch this from Fingers.
+
+
+Rough Design for Quirks:
+
+Guide the Quirks from the Starting Point to the End Point in each level.
+Quirks will constantly wriggle in a straight line and will climb walls of a 45degree angle.
+If they hit a 90degree angle they turn around and wriggle the other direction.
+Click/Touch and hold on the screen to get the tile menu up - drag left for environment tiles, drag right for contraptions.
+Limited amount of environment and contraption tiles available - shown via a number in the corner of the tile.
+Click/Touch both buttons/fingers and drag to move the map around.
+Click/Touch a contraption to interact with it.
+
+Menu System:
+
+[ ] [ ] [ ]   [ ] [ ] [ ]
+[ ] [X] [ ] - [ ] [X] [ ]
+[ ] [ ] [ ]   [ ] [ ] [ ]
+
+
+Contraptions:
+Gates - will allow Quirks to enter in one direction. Tap it to change the direction they're allowed to pass.
+Catapult - will lob Quirks a fair distance across the level. Tap it to launch a Quirk.
+
+Impelement Box2D for collision handling.
+Should be especially useful if linked with Lua the same way as the Pb Prototype System
+We need to store a void pointer in a Box2D object to get back to our Actor... this should be a Reference pointer, and should expose Instance and Remove to the public interface.

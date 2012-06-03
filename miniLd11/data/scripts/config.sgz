@@ -1,0 +1,17 @@
+-- This is the main SGZEngine script file 
+-- We basically just set some things up and call our "main function" from here
+
+--Window Creation
+WindowWidth = 320
+WindowHeight = 240
+WindowBPP = 16
+WindowName = "Little Quirks"
+--Script Configuration
+MainScript = "data/scripts/main.lua"
+MainFunc = "main"
+--Last edited on Mon Dec  8 06:28:33 2008
+
+-- PSP - 480x272x32
+-- GP32/GP2X - 320x240x16/32
+-- WIZ - 240x320 / 320x240 .. 16bit
+-- DINGOO - 320x240x16

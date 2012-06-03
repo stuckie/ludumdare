@@ -1,0 +1,13 @@
+-- This is the main SGZEngine script file 
+-- We basically just set some things up and call our "main function" from here
+
+--Window Creation
+WindowWidth = 1024
+WindowHeight = 768
+WindowBPP = 16
+WindowName = "YARGH! - Shake Yer Booty!"
+--Script Configuration
+MainScript = "data/scripts/yargh.lua"
+MainFunc = "main"
+--Last edited on Sat Apr 24 11:13:55 2010
+ 

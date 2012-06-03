@@ -1,0 +1,12 @@
+-- This is the main SGZEngine script file 
+-- We basically just set some things up and call our "main function" from here
+
+--Window Creation
+WindowWidth = 640
+WindowHeight = 480
+WindowBPP = 32
+WindowName = "derelict_"
+--Script Configuration
+MainScript = "data/scripts/main.lua"
+MainFunc = "main"
+--Last edited on Sat Aug 29 17:22:54 2009

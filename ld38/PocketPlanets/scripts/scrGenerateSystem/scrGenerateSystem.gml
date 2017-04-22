@@ -2,6 +2,7 @@
 
 /* System {
 		Planets - list of planet structs...
+		Ships - list of ship structs...
 		Name - string.. random name?
 		Sprite
 		Icon
@@ -22,5 +23,7 @@ for (var i = 0; i < planetCount; ++i) {
 	var planet = scrGeneratePlanet();
 	ds_list_add(planets, planet);
 }
+
+system[? "Ships"] = ds_list_create();
 
 return system;

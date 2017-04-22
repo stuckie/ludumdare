@@ -36,6 +36,7 @@ var size = irandom(PlanetSize.MAX_SIZE - 1);
 	}
 */
 
+// For now, lets just have all planets shown at the same size...
 
 var planet = ds_map_create();
 
@@ -46,22 +47,22 @@ switch (size) {
 	};
 	break;
 	case PlanetSize.Small: {
-		planet[? "Sprite"] = sprSmallPlanets;
+		planet[? "Sprite"] = sprTinyPlanets;// sprSmallPlanets;
 		planet[? "Space"] = ds_grid_create(2, 2);
 	};
 	break;
 	case PlanetSize.Medium: {
-		planet[? "Sprite"] = sprMediumPlanets;
+		planet[? "Sprite"] = sprTinyPlanets;// sprMediumPlanets;
 		planet[? "Space"] = ds_grid_create(3, 3);
 	};
 	break;
 	case PlanetSize.Large: {
-		planet[? "Sprite"] = sprLargePlanets;
+		planet[? "Sprite"] = sprTinyPlanets;// sprLargePlanets;
 		planet[? "Space"] = ds_grid_create(4, 4);
 	};
 	break;
 	case PlanetSize.Massive: {
-		planet[? "Sprite"] = sprMassivePlanets;
+		planet[? "Sprite"] = sprTinyPlanets;// sprMassivePlanets;
 		planet[? "Space"] = ds_grid_create(5, 5);
 	};
 	break;

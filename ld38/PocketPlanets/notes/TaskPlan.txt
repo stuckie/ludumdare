@@ -1,0 +1,86 @@
+Outline of Tasks
+----------------
+
+Doing the Competition so we have 48 hours.
+Starting "late" as went to sleep normally.. time is currently 10:30am - 8.5 hours into it.
+As there's no way that I can do a straight battering throughout the weekend, lets work out a plan...
+
+Saturday
+--------
+
+10.30 - 11am
+These notes; sort out ideas and get basic project up and running, committed, etc..
+Pick main test platform ( probably HTML5 so more people can play it, and to stop little surprises again like last time - hello, randomize() )
+
+< -- YOU ARE HERE -- >
+11 - 12pm
+Mock up graphics for ships and planets ( read: arrows and circles )
+Work on System generation, to scatter Planets about the screen.
+This'll basically be Galaxy generation too, just instead of planets, it's systems... different icon on screen, and different data structure but same idea
+
+12 - 7pm
+Probably busy with other things..
+
+7 - 8pm
+Work on Planet generation, and get slots working for each building type.
+Make sure Planet stats update as accordingly.
+
+8 - 9pm
+Work on Ship generation.
+Get ships to move from A->B.
+
+9 - 10pm
+Get resources moving about between Planets via Ships
+
+10 - 11pm
+Work on Research trees to make better Ships to do more things
+
+11 - 12am
+Work on Space Stations so we can create things in space closer to Asteroid belts, anomolies, etc..
+
+Sunday
+------
+
+12 - 1am
+Test build.. Should hopefully have small playable at this point of a generated System, with multiple Planets, and lots of little Ships milling about.
+
+1am - 8am
+Sleep...
+
+8 - 9am
+Test build.. nothing broke overnight? Everything still playable? Still feel "fun"?
+Work out bug list and task list for rest of the day
+
+9 - 10am
+Work on getting to other galaxies.. so tears and the permanant solution ( warp gates, probably )
+
+10 - 11am
+Basic Passive AI for other species..
+
+12 - 8pm
+Likely other things...
+
+8 - 9pm
+Basic Aggressive AI for other species.. so work on ship - ship attack, and ship - planet attack
+Damage for ships and planets and buildings and repair works etc...
+
+9 - 10pm
+Test Build.. so we should have a fully working game at this point.. see there's no major bugs
+
+10 - 11pm
+Sound effects
+
+11 - 12am
+Music
+
+12 - 1am
+Polish? Tidy up?
+
+1 - 2am
+Test Build and Submit .. and pray Monday isn't too demanding
+
+Total "guaranteed" work hours: 15
+That's tight...
+Total "possible" work hours: 31 - say 3 for eating - 28
+Likely somewhere around 20.. much like Mini Dungeon Adentures.. but we're going in just after a jam, so still have the momentum.
+That's the theory...

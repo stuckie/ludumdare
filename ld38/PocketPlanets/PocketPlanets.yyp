@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "110b7166-fdf5-4477-acc1-b1b77f304458",
+            "Value": {
+                "id": "6af0d7b3-7330-4012-b357-80a2361d305d",
+                "resourcePath": "scripts\\scrGenerateGalaxy\\scrGenerateGalaxy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "11e5614a-a4a4-4749-99c7-bef59e42e537",
             "Value": {
                 "id": "ea820840-f894-406e-8a81-91846cb0e1b1",
@@ -44,6 +52,14 @@
                 "id": "88d28908-79d4-4fea-992f-648068d358f7",
                 "resourcePath": "views\\12b116ee-6e68-49ec-939a-9800818fd59c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1b6ce843-2fe2-4677-9dc4-f8e2c909a69b",
+            "Value": {
+                "id": "5b9b08c8-e5c5-4281-8318-bd34cfbbdde4",
+                "resourcePath": "sprites\\sprMediumPlanets\\sprMediumPlanets.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -71,6 +87,14 @@
             }
         },
         {
+            "Key": "3b577dcc-f9b1-404d-bfb6-3303f62af6c2",
+            "Value": {
+                "id": "c9fae5b6-50e9-4a74-a873-3a4a44c83c10",
+                "resourcePath": "scripts\\scrGenerateSystem\\scrGenerateSystem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "449ab162-7ee3-40d8-b01c-fd0f5c0386a3",
             "Value": {
                 "id": "5dc4593e-5a62-4b76-a9ba-b71f38541f6b",
@@ -79,11 +103,51 @@
             }
         },
         {
+            "Key": "47c26ddb-9007-4592-8bb5-99ef2af72495",
+            "Value": {
+                "id": "a3c7292d-a761-4d84-b6b4-51bff6edfd32",
+                "resourcePath": "notes\\Ideas.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "48222b06-56b8-4d06-a085-a49a9f735dc7",
             "Value": {
                 "id": "49e5eac8-a2c2-44c5-9acf-a0351cf2ac6d",
                 "resourcePath": "views\\48222b06-56b8-4d06-a085-a49a9f735dc7.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "491ec5b0-1668-497c-a502-eccb489ce679",
+            "Value": {
+                "id": "5a42754b-78ad-42c5-8df4-845c11ca04b5",
+                "resourcePath": "notes\\Overview.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "6287f67a-0465-4896-8e6a-5d5bb759214d",
+            "Value": {
+                "id": "d02645b5-5f22-4fc2-b54f-52e6e0e0cd17",
+                "resourcePath": "sprites\\sprMassivePlanets\\sprMassivePlanets.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6b61b188-2787-4c28-bff8-dd6ee339f133",
+            "Value": {
+                "id": "f77f6229-0e5e-4f84-be83-a7e1698e2f2a",
+                "resourcePath": "objects\\objSystemDisplay\\objSystemDisplay.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "732b7ac6-1bfe-4737-ad63-0c01474057f6",
+            "Value": {
+                "id": "f0580d08-c8ac-4bd0-b71b-c97ee66b8bde",
+                "resourcePath": "sprites\\sprShip\\sprShip.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -135,6 +199,14 @@
             }
         },
         {
+            "Key": "9f19d944-97bc-41f6-9160-840eed067709",
+            "Value": {
+                "id": "b71c3e3e-af88-4c98-aa0c-15e23df021d2",
+                "resourcePath": "scripts\\scrGeneratePlanet\\scrGeneratePlanet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a666030e-8664-49d7-9601-9dc7e0a3fdb8",
             "Value": {
                 "id": "e6ab7368-ed0c-4cc9-b457-fd13fefde2e5",
@@ -151,6 +223,14 @@
             }
         },
         {
+            "Key": "afcc0eba-4f99-4012-80e5-3a07b045bac2",
+            "Value": {
+                "id": "37df3a18-e703-4442-b58c-88b3923d52cc",
+                "resourcePath": "sprites\\sprSmallPlanets\\sprSmallPlanets.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bd21d214-992e-4582-b680-85d59c994b16",
             "Value": {
                 "id": "6a96556d-2131-48d4-b8e8-d996dccd37bb",
@@ -159,11 +239,27 @@
             }
         },
         {
+            "Key": "c5f47e59-c649-4f4d-9290-3fc45f00687b",
+            "Value": {
+                "id": "4bf136fe-9703-418a-a4fb-fabbce44b654",
+                "resourcePath": "sprites\\sprLargePlanets\\sprLargePlanets.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "1efbd297-c766-48b6-9cfa-1922854366ba",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cdaf1ca4-6eda-4767-9a6d-842c73f79937",
+            "Value": {
+                "id": "de10b3d9-17f2-423a-be90-1bdd9abc09f1",
+                "resourcePath": "notes\\TaskPlan.yy",
+                "resourceType": "GMNotes"
             }
         },
         {
@@ -183,11 +279,27 @@
             }
         },
         {
+            "Key": "d9554353-f647-4290-a1c9-f01135715857",
+            "Value": {
+                "id": "c55c0482-4343-4be2-ba1c-061756111339",
+                "resourcePath": "views\\d9554353-f647-4290-a1c9-f01135715857.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e05186a7-fe07-4557-bdaf-1fbdbedc932e",
             "Value": {
                 "id": "1fafc3fb-ae26-40f1-9dfb-77efcebb1aee",
                 "resourcePath": "views\\e05186a7-fe07-4557-bdaf-1fbdbedc932e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e783252b-e036-4723-a774-1459749b5d25",
+            "Value": {
+                "id": "cf8682c9-f9a6-437d-aeea-7cd7ca4de146",
+                "resourcePath": "sprites\\sprTinyPlanets\\sprTinyPlanets.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -200,7 +312,9 @@
         }
     ],
     "script_order": [
-        
+        "9f19d944-97bc-41f6-9160-840eed067709",
+        "3b577dcc-f9b1-404d-bfb6-3303f62af6c2",
+        "110b7166-fdf5-4477-acc1-b1b77f304458"
     ],
     "tutorial": ""
 }

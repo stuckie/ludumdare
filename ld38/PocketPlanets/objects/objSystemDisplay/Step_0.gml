@@ -33,7 +33,7 @@ if (true == mouse_check_button_released(mb_right)) {
 			ship[? "X"] = mouse_x;
 			ship[? "Y"] = mouse_y;
 			ds_list_add(oSystem[? "Ships"], ship);
-			var iShip = scrCreateSystemShip(ship);
+			//var iShip = scrCreateSystemShip(ship);
 			iShip.oSystem = id;
 			ds_list_add(oShips, iShip);
 		}

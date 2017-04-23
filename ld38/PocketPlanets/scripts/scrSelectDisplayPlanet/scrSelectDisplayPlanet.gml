@@ -1,8 +1,7 @@
 var planet = argument[0];
 var select = argument[1];
 
-var system = planet.oSystem;
-var list = system.oSelections;
+var list = oSelections;
 
 for (var i = ds_list_size(list); i > 0; --i) {
 	if (planet == list[| i - 1]) {
@@ -17,4 +16,11 @@ for (var i = ds_list_size(list); i > 0; --i) {
 if (false == select) return false;
 
 ds_list_add(list, planet);
+
+if (true == instance_exists(objPlanetStats))
+	instance_destroy(objPlanetStats);
+		
+var inst = instance_create_layer(planet.x + planet.sprite_width, planet.y - planet.sprite_height, "UI", objPlanetStats);
+inst.oPlanet = planet;
+
 return true;

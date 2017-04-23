@@ -20,7 +20,7 @@ planet[? "Population"] = 1;
 
 for (var i = ds_list_size(planets); i > 0; --i) {
 	var planet = planets[| i - 1];
-	var iPlanet = scrCreateSystemPlanet(planet);
+	//var iPlanet = scrCreateSystemPlanet(planet);
 	iPlanet.oSystem = id;
 	ds_list_add(oPlanets, iPlanet)
 };
@@ -29,7 +29,7 @@ for (var i = ds_list_size(planets); i > 0; --i) {
 var ships = oSystem[? "Ships"];
 for (var i = ds_list_size(ships); i > 0; --i) {
 	var ship = ships[| i - 1];
-	var iShip = scrCreateSystemShip(ship);
+//	var iShip = scrCreateSystemShip(ship);
 	iShip.oSystem = id;
 	ds_list_add(oShips, iShip);
 };

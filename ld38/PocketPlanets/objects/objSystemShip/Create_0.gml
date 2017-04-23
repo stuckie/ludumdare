@@ -14,6 +14,8 @@ oState = SystemShipState.Setup;
 
 oSpeed = 1;
 oTarget = undefined;
+oTargetX = undefined;
+oTargetY = undefined;
 
 oUIOffsetX = sprite_width / 2;
 oUIOffsetY = sprite_height / 2;

@@ -10,12 +10,21 @@ oPlanets = ds_list_create();
 oShips = ds_list_create();
 
 var planets = oSystem[? "Planets"];
+
+// TEST code to pick a home planet
+var homePlanet = irandom(ds_list_size(planets) - 1);
+var planet = planets[| homePlanet];
+planet[? "Owned"] = id;
+planet[? "Scanned"] = true;
+planet[? "Population"] = 1;
+
 for (var i = ds_list_size(planets); i > 0; --i) {
 	var planet = planets[| i - 1];
 	var iPlanet = scrCreateSystemPlanet(planet);
 	iPlanet.oSystem = id;
 	ds_list_add(oPlanets, iPlanet)
 };
+
 
 var ships = oSystem[? "Ships"];
 for (var i = ds_list_size(ships); i > 0; --i) {
@@ -35,3 +44,5 @@ oCamera[? "y"] = 0;
 oCamera[? "mX"] = 0;
 oCamera[? "mY"] = 0;
 oCamera[? "id"] = view_camera[0];
+
+draw_set_font(font_0);

@@ -12,7 +12,7 @@ Saturday
 These notes; sort out ideas and get basic project up and running, committed, etc..
 Pick main test platform ( probably HTML5 so more people can play it, and to stop little surprises again like last time - hello, randomize() )
 
-< -- YOU ARE HERE -- >
+
 11 - 12pm
 Mock up graphics for ships and planets ( read: arrows and circles )
 Work on System generation, to scatter Planets about the screen.
@@ -24,7 +24,7 @@ Probably busy with other things..
 7 - 8pm
 Work on Planet generation, and get slots working for each building type.
 Make sure Planet stats update as accordingly.
-
+< -- YOU ARE HERE -- >
 8 - 9pm
 Work on Ship generation.
 Get ships to move from A->B.
@@ -37,8 +37,37 @@ Work on Research trees to make better Ships to do more things
 
 11 - 12am
 Work on Space Stations so we can create things in space closer to Asteroid belts, anomolies, etc..
+< -- You should be here... -- >
 
-Sunday
+
+--- OK End of Day one and we are way behind...
+Why?
+UI stuff... and overloading the design with things that I don't think I'll be able to finish off, so let's break it down further.
+
+We want a "lunchtime" 4x game.
+That means we strip back a lot of what a 4X game is to basic blocks.
+Looking at MOO - it gives one planet per system.. perhaps that's the way to go?
+It then gives some options for allocating yearly points to building a ship, industry, eco-friendliness, technology, and defense.
+Short of that, there's nothing much else you can do to planets. You can transport colonists between systems "free" without having to build a ship first.
+Ships are interesting in that they do let you design them a bit.. and range from small to huge.
+It's turn-based, each turn being a year, and a lot of science researchy stuff going on.
+Combat handled in entirely different interface.
+Planets have upper limit of colonists, which seem to determine the yearly points you get to spend.
+
+So with that.. what's the takeaway?
+We'd like the ship configuration stuff, but at this point ( literal mid way mark ) it's not going to happen, so will be fixed Colony, Scout, Fighter, Destroyer, Dreadnaught
+Going to need a tech tree to research, but it's likely going to be Shields mk 1 - 5, Missiles mk 1 - 5, Laser mk 1 - 5, Projectile mk 1 - 5, Scanning mk 1 - 5, Terraforming mk 1 - 5
+Get rid of the trade route stuff.. nevermind transferring food/materials back and forth for now ( though would have turned it into Space Settlers, with ships milling about everywhere )
+Increase the size of the room and have a relatively big system - and only one system - nevermind the multiple galaxies, tears, warpgate stuff.. nice idea, but not just now.
+So, to explore, we'll need to build scout ships which are fast and small. Colony ships to expand. Fighters to take out the undesirables. Destroyers to make a point, and Dreadnaughts when we've had enough.
+Resource wise... I think the catch all "Minerals" is probably best.. and have each planet handle things like MOO - ship building, industry, eco, tech and defense - where planets with extra minerals give industry bonuses, and so forth.
+Meant to be a lunchtime 4x, not micromanaging space-bus routes.
+
+See Sunday's plan Part 2 for a breakdown.
+
+
+
+Sunday (Original)
 ------
 
 12 - 1am
@@ -84,3 +113,65 @@ That's tight...
 Total "possible" work hours: 31 - say 3 for eating - 28
 Likely somewhere around 20.. much like Mini Dungeon Adentures.. but we're going in just after a jam, so still have the momentum.
 That's the theory...
+
+-------------------------------------------
+
+Sunday Part 2
+-------------
+
+1am - 2am
+Have a small crisis that things aren't going to plan and re-evaluate everything.
+
+2 - 3am
+Quick play of MOO and Stars! to refresh memory on how they worked, and be shocked at how simple MOO actually was.
+Break down the design of Pocket Planets and chuck most of it away
+
+3 - 7am
+Sleep
+
+7 - 8am
+Rip out most images and current building GUI stuff
+Build GUI elements for managing planet resources.
+Build GUI elements for ship building.
+
+8 - 9am
+Work out formulas for resources and tech trees
+
+9 - 10am
+Get ship creation working - particularly so that extra bits will affect the ship.
+
+10 - 11am
+Basic passive AI - so have ships wandering around, and some AI have a bit of control over their colonies
+
+11 - 1pm
+Lunch, most likely
+
+1 - 2pm
+Basic agressive AI - have it attack and work out attack screen? may just be explosions in space and one disappears
+
+2 - 3pm
+Sound effects
+
+3 - 4pm
+Music
+
+4 - 6pm
+Upgrade graphics
+
+6 - 7pm
+Tea, most likely
+
+7 - 8pm
+Test Build
+
+8 - 9pm
+May need an end goal defined and worked out.. if we're not using galaxies and the tear/warp gate mechanics, going to need something else...
+
+9 - 10pm
+Break
+
+10 - 11pm
+Test Build again... fix anything strange
+
+11 - 12am
+Submit

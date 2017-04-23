@@ -104,5 +104,8 @@ planet[? "Size"] = size;
 planet[? "X"] = irandom(room_width);
 planet[? "Y"] = irandom(room_height);
 planet[? "Name"] = "Planet " + string(random(10000));
+planet[? "Population"] = 0;
+planet[? "Scanned"] = false;
+planet[? "Owned"] = noone;
 
 return planet;

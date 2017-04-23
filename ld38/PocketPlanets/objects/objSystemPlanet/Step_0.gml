@@ -7,6 +7,9 @@ switch (oState) {
 		
 		oUIOffsetX = sprite_width / 2;
 		oUIOffsetY = sprite_height / 2;
+		
+		oScanned = oPlanet[? "Scanned"];
+		oOwned = oPlanet[? "Owned"];
 	};
 	break;
 	case SystemPlanetState.Idle: {

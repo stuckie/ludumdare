@@ -47,6 +47,11 @@ if (true == mouse_check_button_released(mb_right)) {
 				selected.oTarget = inst;
 				selected.oState = SystemShipState.MovingTo;
 				selected.oSelected = scrSelectDisplayShip(selected, false);
+			} else {
+				selected.oTargetX = mouse_x;
+				selected.oTargetY = mouse_y;
+				selected.oState = SystemShipState.MovingTo;
+				selected.oSelected = scrSelectDisplayShip(selected, false);
 			}
 		}
 	}

@@ -12,6 +12,7 @@ if (true == mouse_check_button(mb_left)) {
 			
 		for (var i = ds_list_size(oShips); i > 0; --i) {
 			var ship = oShips[| i - 1];
+			if (undefined == ship) continue;
 			with (ship) {
 				var isSelected = place_meeting(x, y, objSelection);
 				ship.oHighlighted = isSelected;
@@ -21,6 +22,7 @@ if (true == mouse_check_button(mb_left)) {
 		
 		for (var i = ds_list_size(oPlanets); i > 0; --i) {
 			var planet = oPlanets[| i - 1];
+			if (undefined == planet) continue;
 			with (planet) {
 				var isSelected = place_meeting(x, y, objSelection);
 				planet.oHighlighted = isSelected;
@@ -36,11 +38,13 @@ if (true == mouse_check_button_released(mb_left)) {
 		
 		for (var i = ds_list_size(oShips); i > 0; --i) {
 			var ship = oShips[| i - 1];
+			if (ship == undefined) continue;
 			ship.oHighlighted = false;
 		}
 		
 		for (var i = ds_list_size(oPlanets); i > 0; --i) {
 			var planet = oPlanets[| i - 1];
+			if (planet == undefined) continue;
 			planet.oHighlighted = false;
 		}
 	}

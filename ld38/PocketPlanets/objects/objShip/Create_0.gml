@@ -17,6 +17,8 @@ oTarget = undefined;
 oTargetX = undefined;
 oTargetY = undefined;
 
+oOwnedBy = noone;
+
 oUIOffsetX = sprite_width / 2;
 oUIOffsetY = sprite_height / 2;
 

@@ -59,33 +59,9 @@ global.MouseX = homeworld.x - (camera_get_view_width(view_camera[0]) / 2);
 global.MouseY = homeworld.y  - (camera_get_view_height(view_camera[0]) / 2);
 camera_set_view_pos(view_camera[0], global.MouseX, global.MouseY);
 
-var ship = scrGenerateShip(ConstructShip.Scout);
-ship[? "X"] = homeworld.x + 32;
-ship[? "Y"] = homeworld.y;
-ds_list_add(global.GalaxyData[? "Ships"], ship);
-var iShip = scrCreateShip(ship);
-iShip.oSystem = id;
-ds_list_add(oShips, iShip);
-ds_list_add(oPlayer.oShips, iShip);
-
-ship = scrGenerateShip(ConstructShip.Scout);
-ship[? "X"] = homeworld.x - 32;
-ship[? "Y"] = homeworld.y;
-ds_list_add(global.GalaxyData[? "Ships"], ship);
-var iShip = scrCreateShip(ship);
-iShip.oSystem = id;
-ds_list_add(oShips, iShip);
-ds_list_add(oPlayer.oShips, iShip);
-
-ship = scrGenerateShip(ConstructShip.ColonyShip);
-ship[? "X"] = homeworld.x;
-ship[? "Y"] = homeworld.y - 32;
-ds_list_add(global.GalaxyData[? "Ships"], ship);
-var iShip = scrCreateShip(ship);
-iShip.oSystem = id;
-ds_list_add(oShips, iShip);
-ds_list_add(oPlayer.oShips, iShip);
-
+ship = scrBuildShip(ConstructShip.Scout, oPlayer, homeworld);
+ship = scrBuildShip(ConstructShip.Scout, oPlayer, homeworld);
+ship = scrBuildShip(ConstructShip.ColonyShip, oPlayer, homeworld);
 
 draw_set_font(font_0);
 global.LastMouseX = 0;

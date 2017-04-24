@@ -2,8 +2,9 @@
 
 switch (oState) {
 	case SystemShipState.Setup: {
-		image_index = oShip[? "Type"] - 1;
-		oSpeed = 1 / oShip[? "Type"];
+		oType = oShip[? "Type"];
+		image_index = oType - 1;
+		oSpeed = 1 / oType;
 		
 		oUIOffsetX = sprite_width / 2;
 		oUIOffsetY = sprite_height / 2;
@@ -18,7 +19,7 @@ switch (oState) {
 			image_angle = point_direction(x, y, oTarget.x, oTarget.y);
 			if (oTarget.sprite_width > point_distance(x, y, oTarget.x, oTarget.y)) {
 				speed = 0;
-				if (objSystemPlanet == oTarget.object_index)
+				if (objPlanet == oTarget.object_index)
 					oState = SystemShipState.Orbit;
 				else
 					oState = SystemShipState.Idle;
@@ -34,6 +35,26 @@ switch (oState) {
 	};
 	break;
 	case SystemShipState.Orbit: {
+		switch (oType) {
+			case ConstructShip.Scout: {
+				if ((undefined != oTarget)
+				&& (objPlanet == oTarget.object_index)) {
+					scrScanPlanet(oOwnedBy, oTarget);
+				}
+			};
+			break;
+			case ConstructShip.ColonyShip: {
+				if ((undefined != oTarget)
+				&& (objPlanet == oTarget.object_index)) {
+					scrScanPlanet(oOwnedBy, oTarget);
+					if (noone == oTarget.oOwnedBy) {
+						scrColonise(oTarget, oOwnedBy);
+						scrDestroyShip(id);
+					}
+				}
+			};
+			break;
+		};
 	};
 	break;
 	case SystemShipState.Combat: {

@@ -19,3 +19,5 @@ switch (oPlanet.oShipToConstruct) {
 };
 
 draw_text(x + 94, y + 83, shipToConstruct);
+
+draw_rectangle_color(x + 70 + oPlanet.oAtmosphere - 1, y + 15, x + 70 + oPlanet.oAtmosphere + 1, y + 23, c_white, c_white, c_white, c_white, false);

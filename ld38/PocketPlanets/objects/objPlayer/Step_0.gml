@@ -27,7 +27,7 @@ if (true == mouse_check_button(mb_left)) {
 				var isSelected = place_meeting(x, y, objSelection);
 				planet.oHighlighted = isSelected;
 			}
-			planet.oSelected = scrSelectDisplayPlanet(planet.id, isSelected);
+			planet.oSelected = scrSelectDisplayPlanet(planet, isSelected);
 		}
 	}
 }
@@ -53,8 +53,13 @@ if (true == mouse_check_button_released(mb_left)) {
 if (true == mouse_check_button_released(mb_right)) {
 	for (var i = ds_list_size(oSelections); i > 0; --i) {
 		var selected = oSelections[| i - 1];
+		if (undefined == selected) continue;
+		if (false == instance_exists(selected)) continue;
 		if (objShip == selected.object_index) {
-			var inst = instance_position(mouse_x, mouse_y, objPlanet);
+			selected.oTarget = undefined;
+			selected.oTargetX = undefined;
+			selected.oTargetY = undefined;
+			var inst = instance_position(mouse_x, mouse_y, objSpaceObject);
 			if (noone != inst) {
 				selected.oTarget = inst;
 				selected.oState = SystemShipState.MovingTo;

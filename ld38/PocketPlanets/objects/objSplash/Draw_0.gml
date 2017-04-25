@@ -4,15 +4,15 @@ var sprite = undefined;
 
 switch (oCurrentSplash) {
 	case SplashScreen.ArcadeBadgers: {
-		sprite = sprSplashArcadeBadgers;
+		sprite_index = sprSplashArcadeBadgers;
 	};
 	break;
 	case SplashScreen.MadeInGM: {
-		sprite = sprSplashMAdeInGM;
+		sprite_index = sprSplashMadeinGM;
 	};
 	break;
 	case SplashScreen.GameLogo: {
-		sprite = sprSplashGameLogo;
+		sprite_index = sprGameLogo;
 	};
 	break;
 	case SplashScreen.END_OF_SPLASH: {
@@ -21,4 +21,4 @@ switch (oCurrentSplash) {
 	break;
 };
 
-draw_sprite(sprite, 0, 0, 0);
+draw_sprite(sprite_index, 0, room_width / 2 - sprite_width / 2, room_height / 2 - sprite_height / 2);

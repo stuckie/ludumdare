@@ -6,7 +6,7 @@ oMaxPopulation = 100;
 oAtmosphere = irandom(100);
 oPlayerSeen = false;
 oOwnedBy = noone;
-oShipToConstruct = ConstructShip.Scout;
+oShipToConstruct = ConstructShip.ColonyShip;
 
 image_speed = 0;
 
@@ -57,10 +57,10 @@ if (oAtmosphere < 10) {
 
 if (false == oPlayerSeen) image_index = 7;
 
-oEcologyTimer = room_speed * room_speed; // 1 minute
-oDefenseTimer = room_speed * room_speed;
-oConstructionTimer = room_speed * room_speed;
-oPopulationTimer = room_speed * room_speed;
+oEcologyTimer = room_speed;
+oDefenseTimer = room_speed;
+oConstructionTimer = room_speed;
+oPopulationTimer = room_speed;
 
 alarm[0] = oPopulationTimer;
 alarm[1] = oEcologyTimer;
@@ -72,3 +72,16 @@ oSelected = false;
 
 oUIOffsetX = sprite_width / 2;
 oUIOffsetY = sprite_height / 2;
+
+oMaxShields = 10;
+oShields = 10;
+oMaxHull = 1000;
+oHull = 1000;
+oAttack = 10;
+oLaserOffsetX = 0;
+oLaserOFfsetY = 0;
+
+oCurrentShipCost = scrShipCost(ConstructShip.ColonyShip);
+oCurrentShipProgress = 0;
+
+scrCheckPlanetStats("");

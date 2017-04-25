@@ -24,7 +24,8 @@ while (false == position_empty(_planet.x + (_x * _offset), _planet.y + (_y * _of
 ship[? "X"] = _planet.x + (_x * _offset);
 ship[? "Y"] = _planet.y + (_y * _offset);
 ds_list_add(global.GalaxyData[? "Ships"], ship);
-var iShip = scrCreateShip(ship, oPlayer);
+var iShip = scrCreateShip(ship, _player);
 ds_list_add(_player.oShips, iShip);
+ds_list_add(global.GameData.oShips, iShip);
 
 return iShip;

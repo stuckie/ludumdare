@@ -11,9 +11,10 @@ if (true == oHighlighted) {
 }
 
 if (SystemShipState.MovingTo == oState) {
-	if (undefined != oTarget)
+	if ((undefined != oTarget)
+	&& (true == instance_exists(oTarget)))
 		draw_line_color(x, y, oTarget.x, oTarget.y, c_green, c_green);
-	else
+	else if ((undefined != oTargetX) && (undefined != oTargetY))
 		draw_line_color(x, y, oTargetX, oTargetY, c_green, c_green);
 }
 	
@@ -23,3 +24,16 @@ if (true == oSelected) {
 
 if (SystemShipState.Orbit == oState) {
 }
+
+if (SystemShipState.Combat == oState) {
+	if ((undefined != oTarget)
+	&& (true == instance_exists(oTarget))
+	&& (true == oLaserFire))
+		draw_line_color(x, y, oTarget.x + oLaserOffsetX, oTarget.y + oLaserOffsetY, c_red, c_red);
+}
+
+if (oShields < oMaxShields)
+	draw_rectangle_color(x - 5, y + 5, x - 5 + (10 * (oShields / oMaxShields)), y + 7, c_aqua, c_aqua, c_aqua, c_aqua, false);
+	
+if (oHull < oMaxHull)
+	draw_rectangle_color(x - 5, y + 8, x - 5 + (10 * (oHull / oMaxHull)), y + 10, c_red, c_red, c_red, c_red, false);

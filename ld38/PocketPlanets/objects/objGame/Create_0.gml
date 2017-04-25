@@ -13,6 +13,7 @@
 // Some number setup...
 global.PlanetCount = 0;
 global.ShipCount = 0;
+global.GameData = id;
 
 // We can already generate a system and spread it about, so lets go and do that.
 global.GalaxyData = scrGenerateSystem();
@@ -47,21 +48,39 @@ ds_list_add(global.Players, oAI);
 // Give each player a homeworld, and set their ships up.
 var iHomeworld = irandom(ds_list_size(oPlanets));
 var homeworld = oPlanets[| iHomeworld];
-ds_list_add(oPlayer.oPlanets, homeworld);
 homeworld.oAtmosphere = 50; // it's the homeworld, it's ideal
-homeworld.oPopulation = 100;
-homeworld.oOwnedBy = oPlayer;
 scrScanPlanet(oPlayer, homeworld);
+scrColonise(homeworld, oPlayer);
+homeworld.oPopulation = 100;
+
 with (oPlayer)
 	scrSelectDisplayPlanet(homeworld, true);
+	
+oPlayer.image_blend = c_white;
 	
 global.MouseX = homeworld.x - (camera_get_view_width(view_camera[0]) / 2);
 global.MouseY = homeworld.y  - (camera_get_view_height(view_camera[0]) / 2);
 camera_set_view_pos(view_camera[0], global.MouseX, global.MouseY);
 
-ship = scrBuildShip(ConstructShip.Scout, oPlayer, homeworld);
+var ship = scrBuildShip(ConstructShip.Scout, oPlayer, homeworld);
 ship = scrBuildShip(ConstructShip.Scout, oPlayer, homeworld);
 ship = scrBuildShip(ConstructShip.ColonyShip, oPlayer, homeworld);
+
+var aiHomeworld = irandom(ds_list_size(oPlanets));
+while (iHomeworld == aiHomeworld) aiHomeworld = irandom(ds_list_size(oPlanets));
+homeworld = oPlanets[| aiHomeworld];
+homeworld.oAtmosphere = 50; // it's the homeworld, it's ideal
+scrScanPlanet(oAI, homeworld);
+scrColonise(homeworld, oAI);
+homeworld.oPopulation = 100;
+ds_list_add(oAI.oSeenPlanets, homeworld);
+
+oAI.image_blend = c_red;
+
+ship = scrBuildShip(ConstructShip.Scout, oAI, homeworld);
+ship = scrBuildShip(ConstructShip.Scout, oAI, homeworld);
+ship = scrBuildShip(ConstructShip.Fighter, oAI, homeworld);
+ship = scrBuildShip(ConstructShip.ColonyShip, oAI, homeworld);
 
 draw_set_font(font_0);
 global.LastMouseX = 0;

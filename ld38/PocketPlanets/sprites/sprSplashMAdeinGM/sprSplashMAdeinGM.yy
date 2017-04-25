@@ -2,7 +2,7 @@
     "id": "104d8e3d-0b23-43b6-b985-67f622ba6cf1",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprite_13",
+    "name": "sprSplashMadeinGM",
     "For3D": false,
     "HTile": false,
     "VTile": false,

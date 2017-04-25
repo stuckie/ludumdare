@@ -1,2 +1,7 @@
 var val = variable_instance_get(oPlanet, oValue);
-variable_instance_set(oPlanet, oValue, ++val);
+if (val < 100) {
+	variable_instance_set(oPlanet, oValue, ++val);
+
+	var thisVal = oValue;
+	with (oPlanet) scrCheckPlanetStats(thisVal);
+}

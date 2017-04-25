@@ -15,6 +15,8 @@ global.PlanetCount = 0;
 global.ShipCount = 0;
 global.GameData = id;
 
+randomise();
+
 // We can already generate a system and spread it about, so lets go and do that.
 global.GalaxyData = scrGenerateSystem();
 
@@ -41,9 +43,8 @@ for (var i = ds_list_size(ships); i > 0; --i) {
 // Now generate the Players.. one user and 1 CPU just now?
 global.Players = ds_list_create();
 oPlayer = instance_create_layer(0, 0, "Controllers", objPlayer);
-oAI = instance_create_layer(0, 0, "Controllers", objAI);
 ds_list_add(global.Players, oPlayer);
-ds_list_add(global.Players, oAI);
+
 
 // Give each player a homeworld, and set their ships up.
 var iHomeworld = irandom(ds_list_size(oPlanets));
@@ -66,21 +67,30 @@ var ship = scrBuildShip(ConstructShip.Scout, oPlayer, homeworld);
 ship = scrBuildShip(ConstructShip.Scout, oPlayer, homeworld);
 ship = scrBuildShip(ConstructShip.ColonyShip, oPlayer, homeworld);
 
-var aiHomeworld = irandom(ds_list_size(oPlanets));
-while (iHomeworld == aiHomeworld) aiHomeworld = irandom(ds_list_size(oPlanets));
-homeworld = oPlanets[| aiHomeworld];
-homeworld.oAtmosphere = 50; // it's the homeworld, it's ideal
-scrScanPlanet(oAI, homeworld);
-scrColonise(homeworld, oAI);
-homeworld.oPopulation = 100;
-ds_list_add(oAI.oSeenPlanets, homeworld);
+var hue = 0;
+for (var i = 0; i < 5; ++i) {
+	var AI = instance_create_layer(0, 0, "Controllers", objAI);
+	ds_list_add(global.Players, AI);
+	var aiHomeworld = irandom(ds_list_size(oPlanets) - 1);
+	homeworld = oPlanets[| aiHomeworld];	
+	while (noone != homeworld.oOwnedBy) {
+		aiHomeworld = irandom(ds_list_size(oPlanets) - 1);
+		homeworld = oPlanets[| aiHomeworld];
+	}
 
-oAI.image_blend = c_red;
-
-ship = scrBuildShip(ConstructShip.Scout, oAI, homeworld);
-ship = scrBuildShip(ConstructShip.Scout, oAI, homeworld);
-ship = scrBuildShip(ConstructShip.Fighter, oAI, homeworld);
-ship = scrBuildShip(ConstructShip.ColonyShip, oAI, homeworld);
+	homeworld.oAtmosphere = 50; // it's the homeworld, it's ideal
+	scrScanPlanet(AI, homeworld);
+	scrColonise(homeworld, AI);
+	homeworld.oPopulation = 100;
+	ds_list_add(AI.oSeenPlanets, homeworld);
+	
+	ship = scrBuildShip(ConstructShip.Scout, AI, homeworld);
+	ship = scrBuildShip(ConstructShip.Scout, AI, homeworld);
+	ship = scrBuildShip(ConstructShip.ColonyShip, AI, homeworld);
+	
+	AI.image_blend = make_color_hsv(hue, 255, 255);
+	hue += 20;
+}
 
 draw_set_font(font_0);
 global.LastMouseX = 0;

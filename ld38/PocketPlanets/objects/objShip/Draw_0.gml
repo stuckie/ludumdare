@@ -13,9 +13,9 @@ if (true == oHighlighted) {
 if (SystemShipState.MovingTo == oState) {
 	if ((undefined != oTarget)
 	&& (true == instance_exists(oTarget)))
-		draw_line_color(x, y, oTarget.x, oTarget.y, c_green, c_green);
+		draw_line_color(x, y, oTarget.x, oTarget.y, oOwnedBy.image_blend, oOwnedBy.image_blend);
 	else if ((undefined != oTargetX) && (undefined != oTargetY))
-		draw_line_color(x, y, oTargetX, oTargetY, c_green, c_green);
+		draw_line_color(x, y, oTargetX, oTargetY, oOwnedBy.image_blend, oOwnedBy.image_blend);
 }
 	
 if (true == oSelected) {

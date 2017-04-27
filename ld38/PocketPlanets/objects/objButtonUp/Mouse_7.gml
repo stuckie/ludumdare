@@ -3,5 +3,5 @@ if (val < 100) {
 	variable_instance_set(oPlanet, oValue, ++val);
 
 	var thisVal = oValue;
-	with (oPlanet) scrCheckPlanetStats(thisVal);
+	with (oPlanet) scrPlanet(Planet.Stats, thisVal);
 }

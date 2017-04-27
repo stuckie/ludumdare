@@ -8,7 +8,7 @@ if (oPopulation < floor(oMaxPopulation)) {
 	else if (Atmosphere.Uninhabitable == oAtmosphereState) oPopulation -= 3;
 }
 
-if ((0 == oHull) || (0 == oPopulation)) scrDestroyPlanet(id);
+if ((0 == oHull) || (0 == oPopulation)) scrPlanet(Planet.Destroy, id);
 
 if (Atmosphere.Ideal == oAtmosphereState) {
 	oMaxPopulation += 1;

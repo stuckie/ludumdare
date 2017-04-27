@@ -41,4 +41,4 @@ if (oOwnedBy != noone) {
 	if (oAtmosphereState == Atmosphere.Uninhabitable) oPopulation -= 0.1;
 }
 
-if (0 >= oPopulation) scrDestroyPlanet(id);
+if (0 >= oPopulation) scrPlanet(Planet.Destroy, id);

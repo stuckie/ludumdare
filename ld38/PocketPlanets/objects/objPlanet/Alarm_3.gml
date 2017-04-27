@@ -8,9 +8,9 @@ if (ConstructShip.None == oShipToConstruct) return;
 if (oCurrentShipCost > oCurrentShipProgress) ++oCurrentShipProgress;
 if (oCurrentShipCost == oCurrentShipProgress) {
 	oCurrentShipProgress = 0;
-	scrBuildShip(oShipToConstruct, oOwnedBy, id);
+	scrShip(Ship.Build, oShipToConstruct, oOwnedBy, id);
 	if (oOwnedBy.object_index == objPlayer)
-		oCurrentShipCost = scrShipCost(oShipToConstruct);
+		oCurrentShipCost = scrShip(Ship.Cost, oShipToConstruct);
 	else oShipToConstruct = ConstructShip.None;
 }
 

@@ -92,7 +92,7 @@ switch (oState) {
 			case ConstructShip.Scout: {
 				if ((undefined != oTarget)
 				&& (objPlanet == oTarget.object_index)) {
-					scrScanPlanet(oOwnedBy, oTarget);
+					scrPlanet(Planet.Scan, oTarget, oOwnedBy);
 					oTarget = undefined;
 				}
 				oState = SystemShipState.Idle;
@@ -113,10 +113,10 @@ switch (oState) {
 			case ConstructShip.ColonyShip: {
 				if ((undefined != oTarget)
 				&& (objPlanet == oTarget.object_index)) {
-					scrScanPlanet(oOwnedBy, oTarget);
+					scrPlanet(Planet.Scan, oTarget, oOwnedBy)
 					if (noone == oTarget.oOwnedBy) {
-						scrColonise(oTarget, oOwnedBy);
-						scrDestroyShip(id);
+						scrPlanet(Planet.Colonise, oTarget, oOwnedBy);
+						scrShip(Ship.Destroy, id);
 					}
 				}
 			};
@@ -138,4 +138,4 @@ switch (oState) {
 	break;
 };
 
-if (0 >= oHull) scrDestroyShip(id);
+if (0 >= oHull) scrShip(Ship.Destroy, id);

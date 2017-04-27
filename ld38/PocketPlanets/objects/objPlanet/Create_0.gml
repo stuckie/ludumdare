@@ -81,7 +81,7 @@ oAttack = 10;
 oLaserOffsetX = 0;
 oLaserOFfsetY = 0;
 
-oCurrentShipCost = scrShipCost(ConstructShip.ColonyShip);
+oCurrentShipCost = scrShip(Ship.Cost, ConstructShip.ColonyShip);
 oCurrentShipProgress = 0;
 
-scrCheckPlanetStats("");
+scrPlanet(Planet.Stats, "");

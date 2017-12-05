@@ -1,0 +1,8 @@
+CHEESE!
+-------
+
+Control a mouse running through a single screen room to pick up cheese, and get it back to your mousehole.
+Avoid mousetraps and cats
+Grab power-ups for extra speed, invinsibility.
+Pick-up balls to throw at other mice to stun them, and steal their cheese!
+

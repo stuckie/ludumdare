@@ -1,0 +1,3 @@
+/// @description Stunned
+
+mStunned = false;

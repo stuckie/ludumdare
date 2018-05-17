@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "75ac291e-7061-4bcb-8e8a-3b3545332d41",
+            "Value": {
+                "id": "9f376d4d-3fb0-41c7-a3c8-0714c025f034",
+                "resourcePath": "options\\html5\\options_html5.yy",
+                "resourceType": "GMHtml5Options"
+            }
+        },
+        {
             "Key": "7777f3c2-1f24-4b9c-897e-c9deb1b11466",
             "Value": {
                 "id": "fd20ab71-0acd-43d2-8f6e-5b848f4af1a1",
@@ -412,6 +420,14 @@
                 "id": "e6ab7368-ed0c-4cc9-b457-fd13fefde2e5",
                 "resourcePath": "views\\a666030e-8664-49d7-9601-9dc7e0a3fdb8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "eeb1818a-d8b0-489b-9cf0-1d51dcf0197e",
+                "resourcePath": "options\\linux\\options_linux.yy",
+                "resourceType": "GMLinuxOptions"
             }
         },
         {
@@ -548,6 +564,14 @@
                 "id": "58fe904b-7ef0-4a3b-b34d-6199970fa54b",
                 "resourcePath": "scripts\\scrPickShipToConstruct\\scrPickShipToConstruct.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
+            "Value": {
+                "id": "0f086ec1-71c1-49f4-ba99-ecb9d8d647ff",
+                "resourcePath": "options\\mac\\options_mac.yy",
+                "resourceType": "GMMacOptions"
             }
         },
         {

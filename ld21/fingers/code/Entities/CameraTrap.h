@@ -40,7 +40,6 @@ class CameraTrap : public Entity
 		
 	private:
 		std::vector<Command> mPath;
-		State mState;
 		unsigned int mCurrentFrame;
 		float mTimer;
 		float mAnimationTime;

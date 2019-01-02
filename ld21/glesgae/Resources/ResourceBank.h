@@ -60,7 +60,7 @@ namespace GLESGAE
 		// TODO: Scream if that groupId isn't valid, or doesn't exist...
 		if (Resources::INVALID == groupId) {
 			assert(0);
-			return;
+			return 0;
 		}
 			
 		return mResources[groupId];

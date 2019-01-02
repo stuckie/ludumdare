@@ -18,7 +18,6 @@ using namespace GLESGAE;
 CameraTrap::CameraTrap(const GLESGAE::Resources::Locator& mesh)
 : Entity(mesh, Entity::RENDER_BOX_COLLIDE, Fingers::Entities::Camera)
 , mPath()
-, mState(STOP)
 , mCurrentFrame(0U)
 , mTimer(0.0F)
 , mAnimationTime(2.0F)
